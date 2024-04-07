@@ -5,6 +5,7 @@ import json
 import os
 import random
 import time
+from typing import List, Dict
 
 # import tensorflow as tf
 import torch
@@ -41,6 +42,7 @@ def parse_args(args=None):
     parser.add_argument("--weight_decay", default=0.000001, type=float)
     parser.add_argument("--early_stop", default=100, type=int)
     parser.add_argument("--max_degree", default=3, type=int)
+    parser.add_argument("--model_name", default='model', type=str)
     return parser.parse_args(args)
 
 def save_model(model, optimizer, args):
@@ -51,18 +53,24 @@ def save_model(model, optimizer, args):
     if not os.path.exists(args.save_path):
         os.makedirs(args.save_path)
     argparse_dict = vars(args)
-    with open(os.path.join(args.save_path, 'config.json'), 'w') as fjson:
+    with open(os.path.join(args.save_path, '{}_config.json'.format(args.model_name)), 'w') as fjson:
         json.dump(argparse_dict, fjson)
 
     save_dict = {
         'model_state_dict': model.state_dict(),
         'optimizer_state_dict': optimizer.state_dict()}
-    torch.save(save_dict, os.path.join(args.save_path, 'model.bin'))
+    torch.save(save_dict, os.path.join(args.save_path, '{}.bin'.format(args.model_name)))
 
+    return True
 
-def train(args, features, train_label, train_mask, val_label, val_mask, test_label, test_mask, model, indice_list, weight_list):
+def train(args, features, train_label, train_mask, val_label, val_mask, test_label, test_mask, model, indice_list, weight_list)-> List[Dict]:
+    cost_train = []
     cost_valid = []
+    cost_test = []
+    acc_train = []
     acc_valid = []
+    acc_test = []
+
     max_acc = 0.0
     min_cost = 10.0
     # for (name, param) in model.named_parameters():
@@ -102,19 +110,30 @@ def train(args, features, train_label, train_mask, val_label, val_mask, test_lab
         test_cost, test_acc, pred, labels, test_duration = evaluate(args,
             features, test_label, test_mask, model, indice_list, weight_list)
         model.train()
+
         cost_valid.append(valid_cost)
+
+        cost_train.append(loss.item())
+        cost_test.append(test_cost)
+        acc_train.append(train_acc.item())
         acc_valid.append(valid_acc)
+        acc_test.append(test_acc)
+
         print("Epoch:", '%04d' % (epoch + 1), "train_loss=", "{:.5f}".format(loss.item()), "train_acc=",
             "{:.5f}".format(train_acc.item()), "val_loss=", "{:.5f}".format(valid_cost),
             "val_acc=", "{:.5f}".format(valid_acc), "test_loss=", "{:.5f}".format(test_cost), "test_acc=",
             "{:.5f}".format(test_acc), "time=", "{:.5f}".format(time.time() - t))
 
         # save model
-        if epoch > 700 and cost_valid[-1] < min_cost:
-            save_model(model, optimizer, args)
+        # if epoch > 700 and cost_valid[-1] < min_cost:
+        if cost_valid[-1] < min_cost:
+            saved_res = save_model(model, optimizer, args)
             min_cost = cost_valid[-1]
             print("Current best loss {:.5f}".format(min_cost))
-
+        
+        else:
+            saved_res = False
+        
         # if acc_valid[-1] > max_acc:
         #     save_model(model, optimizer, args)
         #     min_cost = cost_valid[-1]
@@ -127,7 +146,23 @@ def train(args, features, train_label, train_mask, val_label, val_mask, test_lab
             print("Early stopping...")
             break
 
+    if not saved_res:
+        save_model(model, optimizer, args)
     print("Optimization Finished!")
+
+    loss_results = {
+        'train_loss': cost_train,
+        'valid_loss': cost_valid,
+        'test_loss': cost_test
+    }
+
+    acc_results = {
+        'train_acc': acc_train,
+        'valid_acc': acc_valid,
+        'test_acc': acc_test
+    }
+
+    return [loss_results, acc_results]
 
 def evaluate(args, features, label, mask, model, indice_list, weight_list):
     t_test = time.time()
@@ -171,11 +206,12 @@ def get_edge_tensor(adj):
 
 
 def main(args):
+    start_time = time.time()
     
     os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     os.path.abspath(os.path.dirname(os.getcwd()))
     os.path.abspath(os.path.join(os.getcwd(), ".."))
-    f_file = os.sep.join(['..', 'data_tgcn', args.dataset, 'build_train'])
+    
     if torch.cuda.is_available():
         device = 'cuda'
     else:
@@ -217,11 +253,16 @@ def main(args):
     model.to(device)
     
     if args.do_train:
-        train(args, features, y_train, train_mask, y_val, val_mask, y_test, test_mask, model, indice_list, weight_list)
+        print("Starting training")
+        results = train(args, features, y_train, train_mask, y_val, val_mask, y_test, test_mask, model, indice_list, weight_list)
+
+        with open(os.path.join(args.save_path, '{}_train_results.pkl'.format(args.model_name)), 'wb') as f:
+            pkl.dump(results, f)
 
     if args.do_valid:
+        print("Starting validation")
         # FLAGS.dropout = 1.0
-        save_dict = torch.load(os.path.join(args.save_path, 'model.bin'))
+        save_dict = torch.load(os.path.join(args.save_path, '{}.bin'.format(args.model_name)))
         if args.load_ckpt:
             load_ckpt(model)
         else:
@@ -250,7 +291,7 @@ def main(args):
 
     if args.do_test:
         # FLAGS.dropout = 1.0
-        save_dict = torch.load(os.path.join(args.save_path, 'model.bin'))
+        save_dict = torch.load(os.path.join(args.save_path, '{}.bin'.format(args.model_name)))
         if args.load_ckpt:
             load_ckpt(model)
         else:
@@ -276,6 +317,8 @@ def main(args):
         print(metrics.precision_recall_fscore_support(test_labels, test_pred, average='macro'))
         print("Micro average Test Precision, Recall and F1-Score...")
         print(metrics.precision_recall_fscore_support(test_labels, test_pred, average='micro'))
+    end_time = time.time()
+    print("Total execution time: {} seconds".format(round(end_time-start_time,2)))
         
 if __name__ == '__main__':
     main(parse_args())

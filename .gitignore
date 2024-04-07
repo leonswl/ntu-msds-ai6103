@@ -1,5 +1,11 @@
 # Others
 *.DS_Store
+*20ng.sem_adj
+*20ng.seq_adj
+*20ng.syn_adj
+*.aml*
+*model.bin
+*model_test.bin
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
