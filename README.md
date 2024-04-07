@@ -25,8 +25,10 @@ Files are organised based on the structure below. Feel free to extend the subdir
 - [Data](data): data artifacts, includes raw, staging or production data
 - [Assets](assets): for other relevant assets such as images, model  files etc.
 
+
 ## Installation & Usage
 
+### Environment
 Set up environments
 ``` shell
 # linux
@@ -51,4 +53,24 @@ pip freeze > requirements.txt
 
 # install dependencies
 pip install -r requirements.txt
+```
+
+### Building graph
+```
+# cd into directory
+cd Users/LSUN011/ntu-msds-ai6103/src/
+
+# building multi graphs 
+python build_graph.py --gen_sem --gen_seq --gen_syn --dataset R8  --corenlp ../stanford-corenlp-4.5.6
+
+# building only semantic graph with default epochs
+python build_graph.py --gen_sem --dataset 20ng --corenlp ../stanford-corenlp-4.5.6
+
+# building only semantic graph with default epochs
+python build_graph.py --gen_sem --dataset 20ng --corenlp ../stanford-corenlp-4.5.6 --epochs 1 
+```
+
+### Training
+```
+python train.py --do_train --do_valid --do_test --dataset 20ng
 ```

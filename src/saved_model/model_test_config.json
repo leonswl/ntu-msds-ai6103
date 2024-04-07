@@ -1,0 +1,1 @@
+{"do_train": true, "do_valid": true, "do_test": true, "no_sparse": false, "load_ckpt": false, "featureless": false, "save_path": "./saved_model", "dataset": "R8", "model": "gcn", "lr": 2e-05, "epochs": 10, "hidden": 200, "layers": 2, "dropout": 0.8, "weight_decay": 1e-06, "early_stop": 100, "max_degree": 3, "model_name": "model_test"}
