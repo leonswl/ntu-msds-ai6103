@@ -63,7 +63,6 @@ cd Users/LSUN011/ntu-msds-ai6103/src/
 # building multi graphs 
 python build_graph.py --gen_sem --gen_seq --gen_syn --dataset R8  --corenlp ../stanford-corenlp-4.5.6
 
-# building only semantic graph with default epochs
 python build_graph.py --gen_sem --dataset 20ng --corenlp ../stanford-corenlp-4.5.6
 
 # building only semantic graph with default epochs
@@ -72,5 +71,8 @@ python build_graph.py --gen_sem --dataset 20ng --corenlp ../stanford-corenlp-4.5
 
 ### Training
 ```
+# test training scrith
+python train.py --do_train --do_valid --do_test --dataset R8 --epochs 10
+
 python train.py --do_train --do_valid --do_test --dataset 20ng
 ```

@@ -3,9 +3,14 @@
 *20ng.sem_adj
 *20ng.seq_adj
 *20ng.syn_adj
+*R8.sem_adj
+*R8.seq_adj
+*R8.syn_adj
 *.aml*
 *model.bin
 *model_test.bin
+*lstm.bin
+*stanford-corenlp-4.5.6/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
