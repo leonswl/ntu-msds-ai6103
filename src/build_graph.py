@@ -6,6 +6,9 @@ import string
 import time
 import json
 from math import log
+from pathlib import Path
+from datetime import datetime
+import pytz
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # del
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
@@ -19,14 +22,14 @@ from tqdm import tqdm
 import torch
 from torch.optim import AdamW
 from torch.utils.data import TensorDataset, RandomSampler, SequentialSampler, DataLoader
-from utils import pickle_graph, set_torch_seed
+from utils import pickle_graph, set_torch_seed, setup_logging
 
 
 class LSTM_classifier(nn.Module):
-    def __init__(self, vocab_size, emb_size, hidden_size, num_labels, dropout) -> None:
+    def __init__(self, vocab_size, emb_size, hidden_size, num_labels, dropout, num_layers=1) -> None:
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, emb_size)
-        self.lstm = nn.LSTM(input_size=emb_size, hidden_size=hidden_size,num_layers=1, batch_first=True, dropout=dropout, bidirectional=False)
+        self.lstm = nn.LSTM(input_size=emb_size, hidden_size=hidden_size,num_layers=num_layers, batch_first=True, dropout=dropout, bidirectional=False)
         self.classifier = nn.Linear(hidden_size, num_labels)
     def forward(self, inputs):
         emb = self.embedding(inputs)
@@ -113,7 +116,7 @@ def gen_syn(corpus, nlp:StanfordCoreNLP, row_tfidf, col_tfidf, weight_tfidf, wor
     col = col + col_tfidf
     adj = sp.csr_matrix(
         (weight, (row, col)), shape=(node_size, node_size))
-    print("Syntactic graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
+    logger.info("Syntactic graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
     return adj
 
 def trans_corpus_to_ids(corpus, word_id_map, max_len):
@@ -148,10 +151,10 @@ def lstm_eval(model, dataloader, device):
     model.train()
     return acc, all_outs
 
-def train_lstm(corpus, word_id_map, train_size, valid_size, labels, emb_size, hidden_size, dropout, batch_size, epochs, lr, weight_decay, num_labels,device,max_len, dataset):
+def train_lstm(corpus, word_id_map, train_size, valid_size, labels, emb_size, hidden_size, dropout, batch_size, epochs, lr, weight_decay, num_labels,device,max_len, dataset, graphs_saved_path, num_layers):
     vocab_size = len(word_id_map) + 1
     corpus_ids = trans_corpus_to_ids(corpus, word_id_map, max_len)
-    model = LSTM_classifier(vocab_size, emb_size, hidden_size, num_labels, dropout)
+    model = LSTM_classifier(vocab_size, emb_size, hidden_size, num_labels, dropout, num_layers=num_layers)
     model.to(device)
     train_data = corpus_ids[:train_size,:]
     dev_data = corpus_ids[train_size:train_size+valid_size,:]
@@ -180,9 +183,11 @@ def train_lstm(corpus, word_id_map, train_size, valid_size, labels, emb_size, hi
     model.train()
     loss_func = nn.CrossEntropyLoss(reduction='mean')
     best_acc = 0.0
+
+    # training LSTM
     if epochs > 0:
         for ep in range(epochs):
-            print(f"Starting epochs [{ep+1}/{epochs}]")
+            logger.info("Starting epochs [{}/{}]".format(ep+1, epochs))
             for batch in tqdm(train_dataloader):
                 batch = [one.to(device) for one in batch]
                 x, y = batch
@@ -194,11 +199,17 @@ def train_lstm(corpus, word_id_map, train_size, valid_size, labels, emb_size, hi
             acc, all_outs = lstm_eval(model, dev_dataloader, device)
             if acc > best_acc:
                 best_acc = acc
-                print("Saving semantic model into {}_lstm.bin".format(dataset))
-                torch.save(model.state_dict(), '{}_lstm.bin'.format(dataset))
-                print("current best acc={:4f}".format(acc))
+                logger.info("Saving semantic model into {}_lstm.bin".format(dataset))
+
+                # create directory for saving LSTM 
+                # graphs_saved_path = "saved_graphs/run_{}".format(timestamp)
+                # if not os.path.exists(graphs_saved_path):
+                #     os.makedirs(graphs_saved_path)
+                torch.save(model.state_dict(), os.path.join(graphs_saved_path, '{}_lstm.bin'.format(dataset)))
+                logger.info("current best acc={:4f}".format(acc))
     else:
-        print("loading lstm model")
+        # CRITICAL - this part is illogical
+        logger.info("loading lstm model")
         model.load_state_dict(torch.load('lstm.bin'))
     acc, all_outs_train = lstm_eval(model, train_dev_dataloader, device)
     acc, all_outs_dev = lstm_eval(model, dev_dataloader, device)
@@ -206,13 +217,15 @@ def train_lstm(corpus, word_id_map, train_size, valid_size, labels, emb_size, hi
     all_outs = np.concatenate([all_outs_train, all_outs_dev, all_outs_test], axis=0)
     return model, all_outs, corpus_ids  
 
-def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres, train_size, valid_size, labels, num_labels, node_size,device):
-
+def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres, train_size, valid_size, labels, num_labels, node_size, device, graphs_saved_path):
 
     t = time.time()
-    model, all_outs, corpus_ids = train_lstm(corpus, word_id_map, train_size, valid_size, labels, args.embed_size, args.hidden_size, args.dropout, args.batch_size, args.epochs, args.lr, args.weight_decay, num_labels,device, args.max_len, args.dataset)
-    print("Training LSTM completed")
 
+    # training LSTM
+    model, all_outs, corpus_ids = train_lstm(corpus, word_id_map, train_size, valid_size, labels, args.embed_size, args.hidden_size, args.dropout, args.batch_size, args.epochs, args.lr, args.weight_decay, num_labels,device, args.max_len, args.dataset, graphs_saved_path, args.num_layers)
+    logger.info("Training LSTM completed")
+
+    logger.info("all_outs:\n {}".format(all_outs))
 
     num_docs = all_outs.shape[0]
     test_ids = corpus_ids[train_size+valid_size:,:]
@@ -252,7 +265,6 @@ def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres
             min_count = v
         if v > max_count:
             max_count = v
-    print("Completed v loop")
     
     graph = []
     for key in cos_simi_count:
@@ -265,14 +277,14 @@ def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres
         row.append(train_size + i)
         col.append(train_size + j)    
         graph.append(w)
-    print("Completed key loop")
+
     weight = graph + weight_tfidf
     num_edges = len(row)
     row = row + row_tfidf
     col = col + col_tfidf
     adj = sp.csr_matrix(
         (weight, (row, col)), shape=(node_size, node_size))
-    print("Semantic graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
+    logger.info("Semantic graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
     return adj
 
 def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, col_tfidf, weight_tfidf, vocab):
@@ -280,8 +292,8 @@ def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, 
     row, col, weight = [],[],[]
     t = time.time()
     vocab_size = len(vocab)
-    print("Generating sequential graph...")
-    print("windows generating...")
+    logger.info("Generating sequential graph...")
+    logger.info("windows generating...")
     for doc_words in corpus:
         words = doc_words.split()
         length = len(words)
@@ -293,7 +305,7 @@ def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, 
                 window = words[j: j + window_size]
                 windows.append(window)
                 # print(window)
-    print("calculating word frequency...")
+    logger.info("calculating word frequency...")
     word_window_freq = {}
     for window in tqdm(windows):
         appeared = set()
@@ -305,7 +317,7 @@ def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, 
             else:
                 word_window_freq[window[i]] = 1
             appeared.add(window[i])
-    print("calculating word pair frequency...")
+    logger.info("calculating word pair frequency...")
     word_pair_count = {}
     for window in windows:
         for i in range(1, len(window)):
@@ -329,7 +341,7 @@ def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, 
                     word_pair_count[word_pair_str] = 1
     num_window = len(windows)
     pmi_dict = {}
-    print("calculating pmi...")
+    logger.info("calculating pmi...")
     for key in word_pair_count:
         temp = key.split(',')
         i = int(temp[0])
@@ -345,7 +357,7 @@ def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, 
         col.append(train_size + j)
         weight.append(pmi)
         pmi_dict[key] = pmi
-    print("create pmi graph...")
+    logger.info("create pmi graph...")
     weight = weight + weight_tfidf
     num_edges = len(row)
     row = row + row_tfidf
@@ -353,7 +365,7 @@ def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, 
     node_size = train_size + vocab_size + test_size
     adj = sp.csr_matrix(
         (weight, (row, col)), shape=(node_size, node_size))
-    print("Sequential graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
+    logger.info("Sequential graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
     return pmi_dict, adj, row, col
 
 def gen_tfidf(corpus, word_id_map, word_doc_freq, vocab, train_size):
@@ -496,7 +508,7 @@ def gen_corpus(dataset):
 
     return shuffle_doc_name_list, shuffle_doc_words_list, train_ids, test_ids, word_doc_freq, word_id_map, id_word_map, vocab, labels, label_list
 
-def main(args):
+def main(args, timestamp):
     # load stanfordcorenlp
     nlp = StanfordCoreNLP(args.corenlp, lang='en')
 
@@ -506,8 +518,10 @@ def main(args):
     # set gpu or cpu
     if torch.cuda.is_available():
         device = torch.device("cuda")
+        logger.info("Training is running on {}".format(device))
     else:
         device = torch.device("cpu")
+        logger.info("Training is running on CPU")
 
     # load corpus
     name, corpus, train_ids, test_ids, word_doc_freq, word_id_map, id_word_map, vocab, labels, label_list = gen_corpus(args.dataset)
@@ -518,6 +532,14 @@ def main(args):
 
     row_tfidf, col_tfidf, weight_tfidf = gen_tfidf(corpus, word_id_map, word_doc_freq, vocab, len(train_ids))
 
+    # create directory for saving LSTM 
+    graphs_saved_path = "saved_graphs/run_{}".format(timestamp)
+    argparse_dict = vars(args)
+    if not os.path.exists(graphs_saved_path):
+        os.makedirs(graphs_saved_path)
+        with open(os.path.join(graphs_saved_path, 'graph_config.json'.format(timestamp)), 'w') as fjson:
+            json.dump(argparse_dict, fjson)
+
     # generate sequential graph if true
     if args.gen_seq:
         pmi_dict, seq_adj, row, col = gen_seq(corpus, len(train_ids), len(test_ids), args.window_size, word_id_map, row_tfidf, col_tfidf, weight_tfidf, vocab)
@@ -526,7 +548,8 @@ def main(args):
         pickle_graph(
             graph_type='sequential', 
             dataset=args.dataset, 
-            graph_adj=seq_adj)
+            graph_adj=seq_adj,
+            graph_saved_path=graphs_saved_path)
     
     # generate syntatic graph if true
     if args.gen_syn:
@@ -536,19 +559,21 @@ def main(args):
         pickle_graph(
             graph_type='syntactic', 
             dataset=args.dataset, 
-            graph_adj=syn_adj)
+            graph_adj=syn_adj,
+            graph_saved_path=graphs_saved_path)
 
     # generate semantic graph if true
     if args.gen_sem:
         valid_size = int(0.1*len(train_ids))
         train_size = len(train_ids) - valid_size
-        sem_adj = gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, args.thres, train_size, valid_size, labels, num_labels, len(train_ids)+len(vocab)+len(test_ids),device)
+        sem_adj = gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, args.thres, train_size, valid_size, labels, num_labels, len(train_ids)+len(vocab)+len(test_ids),device, graphs_saved_path)
 
         # pickle graph object
         pickle_graph(
             graph_type='semantic', 
             dataset=args.dataset, 
-            graph_adj=sem_adj)
+            graph_adj=sem_adj,
+            graph_saved_path=graphs_saved_path)
 
 def parse_args(args=None):
     parser = argparse.ArgumentParser(
@@ -571,7 +596,16 @@ def parse_args(args=None):
     parser.add_argument("--seed", default=32, type=int)
     parser.add_argument("--corenlp", default='./stanford-corenlp-4.5.0')
     parser.add_argument('--thres', default=0.05, type=float, help="the threshold of semantic graph")
+    parser.add_argument('--num_layers', default=1, type=int, help="number of layers in LSTM")
     return parser.parse_args(args)
 
 if __name__ == '__main__':
-    main(parse_args())
+    # retrieve execution timestamp for logs
+    sgt = pytz.timezone('Asia/Singapore')
+    timestamp = datetime.now(sgt).strftime("%Y-%m-%d_%H-%M-%S")
+
+    # set up logging
+    log_path = os.path.join(Path(os.path.abspath(os.path.dirname(__file__)), '../logs'))
+    logger = setup_logging(log_path=log_path, log_name='graph_log', log_filename='graph', timestamp=timestamp)
+
+    main(parse_args(), timestamp)

@@ -6,6 +6,9 @@ import os
 import random
 import time
 from typing import List, Dict
+from pathlib import Path
+from datetime import datetime
+import pytz
 
 # import tensorflow as tf
 import torch
@@ -43,23 +46,27 @@ def parse_args(args=None):
     parser.add_argument("--early_stop", default=100, type=int)
     parser.add_argument("--max_degree", default=3, type=int)
     parser.add_argument("--model_name", default='model', type=str)
+    parser.add_argument("--run_id", default=None, type=str)
     return parser.parse_args(args)
 
-def save_model(model, optimizer, args):
+def save_model(model, optimizer, args, timestamp):
     '''
-    Save the parameters of the model and the optimizer,
+    Save the parameters of the model   the optimizer,
     as well as some other variables such as step and learning_rate
     '''
-    if not os.path.exists(args.save_path):
-        os.makedirs(args.save_path)
+    if not os.path.exists(os.path.join(args.save_path,'run_{}'.format(timestamp))):
+        print(os.path.join(args.save_path,'run_{}'.format(timestamp)))
+        os.makedirs(os.path.join(args.save_path,'run_{}'.format(timestamp)))
     argparse_dict = vars(args)
-    with open(os.path.join(args.save_path, '{}_config.json'.format(args.model_name)), 'w') as fjson:
+    with open(os.path.join(args.save_path, 'run_{}/{}_config.json'.format(timestamp, args.model_name)), 'w') as fjson:
         json.dump(argparse_dict, fjson)
+    logger.info("Configurations for training:")
+    logger.debug(argparse_dict)
 
     save_dict = {
         'model_state_dict': model.state_dict(),
         'optimizer_state_dict': optimizer.state_dict()}
-    torch.save(save_dict, os.path.join(args.save_path, '{}.bin'.format(args.model_name)))
+    torch.save(save_dict, os.path.join(args.save_path, 'run_{}/{}.bin'.format(timestamp, args.model_name)))
 
     return True
 
@@ -119,17 +126,20 @@ def train(args, features, train_label, train_mask, val_label, val_mask, test_lab
         acc_valid.append(valid_acc)
         acc_test.append(test_acc)
 
-        print("Epoch:", '%04d' % (epoch + 1), "train_loss=", "{:.5f}".format(loss.item()), "train_acc=",
-            "{:.5f}".format(train_acc.item()), "val_loss=", "{:.5f}".format(valid_cost),
-            "val_acc=", "{:.5f}".format(valid_acc), "test_loss=", "{:.5f}".format(test_cost), "test_acc=",
-            "{:.5f}".format(test_acc), "time=", "{:.5f}".format(time.time() - t))
+        # logger.info("Epoch:", '%04d' % (epoch + 1), "train_loss=", "{:.5f}".format(loss.item()), "train_acc=",
+        #     "{:.5f}".format(train_acc.item()), "val_loss=", "{:.5f}".format(valid_cost),
+        #     "val_acc=", "{:.5f}".format(valid_acc), "test_loss=", "{:.5f}".format(test_cost), "test_acc=",
+        #     "{:.5f}".format(test_acc), "time=", "{:.5f}".format(time.time() - t))
+        logger.info("\n Epoch: {:04d} train_loss= {:.5f} train_acc= {:.5f} val_loss= {:.5f} val_acc= {:.5f} test_loss= {:.5f} test_acc= {:.5f} time= {:.5f}".format(
+        epoch + 1, loss.item(), train_acc.item(), valid_cost, valid_acc, test_cost, test_acc, time.time() - t))
+
 
         # save model
         # if epoch > 700 and cost_valid[-1] < min_cost:
         if cost_valid[-1] < min_cost:
-            saved_res = save_model(model, optimizer, args)
+            saved_res = save_model(model, optimizer, args, timestamp)
             min_cost = cost_valid[-1]
-            print("Current best loss {:.5f}".format(min_cost))
+            logger.info("Current best loss {:.5f}".format(min_cost))
         
         else:
             saved_res = False
@@ -143,12 +153,12 @@ def train(args, features, train_label, train_mask, val_label, val_mask, test_lab
         # early stoppage implementation
         # training loop terminates if validation cost exceeds mean of previous epochs 
         if epoch > args.early_stop and cost_valid[-1] > np.mean(cost_valid[-(args.early_stop + 1):-1]):
-            print("Early stopping...")
+            logger.info("Early stopping...")
             break
 
     if not saved_res:
-        save_model(model, optimizer, args)
-    print("Optimization Finished!")
+        save_model(model, optimizer, args, timestamp)
+    logger.info("Optimization Finished!")
 
     loss_results = {
         'train_loss': cost_train,
@@ -205,35 +215,32 @@ def get_edge_tensor(adj):
     return indice, data
 
 
-def main(args):
+def main(args, timestamp):
     start_time = time.time()
-    
-    os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-    os.path.abspath(os.path.dirname(os.getcwd()))
-    os.path.abspath(os.path.join(os.getcwd(), ".."))
     
     if torch.cuda.is_available():
         device = 'cuda'
+        logger.info("Training is running on {}".format(device))
     else:
         device = None
+        logger.info("Training is running on CPU")
+    
     # Set random seed
-    #seed = random.randint(1, 200)
     seed=147
-    print(seed)
+    logger.info("Seed used: {}".format(seed))    
     np.random.seed(seed)
     torch.manual_seed(seed)
     if device == 'cuda':
         torch.cuda.manual_seed(seed)
-    # tf.compat.v1.set_random_seed(seed)
-
     # Load data
-    adj, adj1, adj2, y_train, y_val, y_test, train_mask, val_mask, test_mask, train_size, val_size,test_size, num_labels = load_corpus_torch(args.dataset, device)
+    adj, adj1, adj2, y_train, y_val, y_test, train_mask, val_mask, test_mask, train_size, val_size,test_size, num_labels = load_corpus_torch(args, device)
     adj = adj.tocoo()
     adj1 = adj1.tocoo()
     adj2 = adj2.tocoo()
-    print(adj)
+    logger.debug("adj:")
+    logger.debug("\n {}".format(adj))
 
-    print(adj.shape)
+    logger.info("The shape of adj is {}".format(adj.shape))
 
     # one-hot features
     # features = torch.eye(adj.shape[0], dtype=torch.float).to_sparse().to(device)
@@ -253,16 +260,17 @@ def main(args):
     model.to(device)
     
     if args.do_train:
-        print("Starting training")
+        logger.info("Starting training")
         results = train(args, features, y_train, train_mask, y_val, val_mask, y_test, test_mask, model, indice_list, weight_list)
 
-        with open(os.path.join(args.save_path, '{}_train_results.pkl'.format(args.model_name)), 'wb') as f:
+        with open(os.path.join(args.save_path ,'run_{}/{}_train_results.pkl'.format(timestamp, args.model_name)), 'wb') as f:
             pkl.dump(results, f)
+        logger.info("Successfully pickled file '{}_train_results.pkl' with loss and accuracy metrics to {}".format(args.model_name, args.save_path))
 
     if args.do_valid:
-        print("Starting validation")
+        logger.info("Starting validation")
         # FLAGS.dropout = 1.0
-        save_dict = torch.load(os.path.join(args.save_path, '{}.bin'.format(args.model_name)))
+        save_dict = torch.load(os.path.join(args.save_path, 'run_{}/{}.bin'.format(timestamp, args.model_name)))
         if args.load_ckpt:
             load_ckpt(model)
         else:
@@ -271,27 +279,30 @@ def main(args):
         # Testing
         val_cost, val_acc, pred, labels, val_duration = evaluate(args,
             features, y_val, val_mask, model, indice_list, weight_list)
-        print("Val set results:", "cost=", "{:.5f}".format(val_cost),
-            "accuracy=", "{:.5f}".format(val_acc), "time=", "{:.5f}".format(val_duration))
+        # logger.info("Val set results:", "cost=", "{:.5f}".format(val_cost),
+        #     "accuracy=", "{:.5f}".format(val_acc), "time=", "{:.5f}".format(val_duration))
+        logger.info("Val set results: cost= {:.5f} accuracy= {:.5f} time= {:.5f}".format(val_cost, val_acc, val_duration))
 
         val_pred = []
         val_labels = []
-        print(len(val_mask))
+        logger.debug(val_mask)
+        logger.debug(len(val_mask))
         for i in range(len(val_mask)):
             if val_mask[i] == 1:
                 val_pred.append(pred[i])
                 val_labels.append(labels[i])
 
-        print("Val Precision, Recall and F1-Score...")
-        print(metrics.classification_report(val_labels, val_pred, digits=4))
-        print("Macro average Val Precision, Recall and F1-Score...")
-        print(metrics.precision_recall_fscore_support(val_labels, val_pred, average='macro'))
-        print("Micro average Val Precision, Recall and F1-Score...")
-        print(metrics.precision_recall_fscore_support(val_labels, val_pred, average='micro'))
+        logger.info("Val Precision, Recall and F1-Score...")
+        logger.info("\n {} ".format(metrics.classification_report(val_labels, val_pred, digits=4)))
+        logger.info("Macro average Val Precision, Recall and F1-Score...")
+        logger.info(metrics.precision_recall_fscore_support(val_labels, val_pred, average='macro'))
+        logger.info("Micro average Val Precision, Recall and F1-Score...")
+        logger.info(metrics.precision_recall_fscore_support(val_labels, val_pred, average='micro'))
 
     if args.do_test:
         # FLAGS.dropout = 1.0
-        save_dict = torch.load(os.path.join(args.save_path, '{}.bin'.format(args.model_name)))
+        logger.info("Starting testing")
+        save_dict = torch.load(os.path.join(args.save_path, 'run_{}/{}.bin'.format(timestamp, args.model_name)))
         if args.load_ckpt:
             load_ckpt(model)
         else:
@@ -300,25 +311,36 @@ def main(args):
         # Testing
         test_cost, test_acc, pred, labels, test_duration = evaluate(args,
             features, y_test, test_mask, model, indice_list, weight_list)
-        print("Test set results:", "cost=", "{:.5f}".format(test_cost),
-            "accuracy=", "{:.5f}".format(test_acc), "time=", "{:.5f}".format(test_duration))
+        # logger.info("Test set results:", "cost=", "{:.5f}".format(test_cost),
+        #     "accuracy=", "{:.5f}".format(test_acc), "time=", "{:.5f}".format(test_duration))
+        logger.info("Test set results: cost= {:.5f} accuracy= {:.5f} time= {:.5f}".format(test_cost, test_acc, test_duration))
 
         test_pred = []
         test_labels = []
-        print(len(test_mask))
+        logger.debug("Test mask:")
+        logger.debug(len(test_mask))
         for i in range(len(test_mask)):
             if test_mask[i] == 1:
                 test_pred.append(pred[i])
                 test_labels.append(labels[i])
 
-        print("Test Precision, Recall and F1-Score...")
-        print(metrics.classification_report(test_labels, test_pred, digits=4))
-        print("Macro average Test Precision, Recall and F1-Score...")
-        print(metrics.precision_recall_fscore_support(test_labels, test_pred, average='macro'))
-        print("Micro average Test Precision, Recall and F1-Score...")
-        print(metrics.precision_recall_fscore_support(test_labels, test_pred, average='micro'))
+        logger.info("Test Precision, Recall and F1-Score...")
+        logger.info('\n {}'.format(metrics.classification_report(test_labels, test_pred, digits=4)))
+        logger.info("Macro average Test Precision, Recall and F1-Score...")
+        logger.info(metrics.precision_recall_fscore_support(test_labels, test_pred, average='macro'))
+        logger.info("Micro average Test Precision, Recall and F1-Score...")
+        logger.info(metrics.precision_recall_fscore_support(test_labels, test_pred, average='micro'))
     end_time = time.time()
-    print("Total execution time: {} seconds".format(round(end_time-start_time,2)))
+    logger.info("Total execution time: {} seconds".format(round(end_time-start_time,2)))
         
 if __name__ == '__main__':
-    main(parse_args())
+    
+    # retrieve execution timestamp for logs
+    sgt = pytz.timezone('Asia/Singapore')
+    timestamp = datetime.now(sgt).strftime("%Y-%m-%d_%H-%M-%S")
+
+    # set up logging
+    log_path = os.path.join(Path(os.path.abspath(os.path.dirname(__file__)), '../logs'))
+    logger = setup_logging(log_path=log_path, log_name='training_log', timestamp=timestamp)
+
+    main(parse_args(), timestamp)

@@ -1,11 +1,15 @@
 import numpy as np
 import pickle as pkl
 import scipy.sparse as sp
-import re
+import os
 import torch
 import json
 import random
 import time
+import logging
+from logging.handlers import RotatingFileHandler
+import logging
+
 
 def parse_index_file(filename):
     """Parse index file."""
@@ -21,7 +25,7 @@ def sample_mask(idx, l):
     mask[idx] = 1
     return np.array(mask, dtype=np.bool)
 
-def load_corpus_torch(dataset, device):
+def load_corpus_torch(args, device):
     """
     Loads input corpus from gcn/data directory, torch tensor version
 
@@ -43,10 +47,13 @@ def load_corpus_torch(dataset, device):
 
     adjs = []
     for one in ['seq','sem','syn']:
-        adjs.append(pkl.load(open('./data/{}.{}_adj'.format(dataset,one),'rb')))
+        if args.run_id is not None:
+            adjs.append(pkl.load(open('./saved_graphs/run_{}/{}.{}_adj'.format(args.run_id,args.dataset,one),'rb')))
+        else: 
+            adjs.append(pkl.load(open('./data/{}.{}_adj'.format(args.dataset,one),'rb')))
     adj, adj1, adj2 = adjs[0], adjs[1], adjs[2]
     
-    data = json.load(open('./data/{}_data.json'.format(dataset),'r'))
+    data = json.load(open('./data/{}_data.json'.format(args.dataset),'r'))
     train_ids, test_ids, corpus, labels, vocab, word_id_map, id_word_map, label_list = data
 
     num_labels = len(label_list)
@@ -176,7 +183,7 @@ def preprocess_adj_mix_tensor(adj, device):
     # return torch.sparse_csr_tensor(crow_indices=adj.indptr, col_indices=adj.indices, values=adj.data, dtype=torch.float).to_sparse_coo().to(device)
     return torch.tensor(adj.todense(), dtype=torch.float).to(device)
 
-def pickle_graph(graph_type:str, dataset, graph_adj):
+def pickle_graph(graph_type:str, dataset, graph_adj, graph_saved_path):
     """
     Function to pickle graph using context manager
 
@@ -184,13 +191,14 @@ def pickle_graph(graph_type:str, dataset, graph_adj):
         graph_type [str]: name of graph to be serialised
         dataset [str]: name of dataset
     """
+    logger = logging.getLogger(__name__)
+
     start_time = time.time()
-    print(f"Persisting {graph_type} graph")
+    logger.info(f"Persisting {graph_type} graph")
 
-
-    with open('./data/{}.{}_adj'.format(dataset, graph_type[:3]), 'wb') as f:
+    with open(os.path.join(graph_saved_path, '{}.{}_adj').format(dataset, graph_type[:3]), 'wb') as f:
         pkl.dump(graph_adj, f)
-    print("Successfully persisted {} graph. Serialisation took {} seconds".format(graph_type, round(time.time()-start_time),2))
+    logger.info("Successfully persisted {} graph. Serialisation took {} seconds".format(graph_type, round(time.time()-start_time),2))
 
 def set_torch_seed (seed:int=148):
     """
@@ -204,3 +212,40 @@ def set_torch_seed (seed:int=148):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
+
+def setup_logging(log_path, log_name, timestamp, log_filename='model', max_bytes=1048576, backup_count=3):
+    """
+    Set up logging with RotatingFileHandler.
+
+    Args:
+    - log_path (str): Path to the directory where logs will be stored.
+    - log_filename (str): Base name of the log file (timestamp will be appended).
+    - max_bytes (int): Maximum size of each log file before it is rotated.
+    - backup_count (int): Number of backup log files to keep.
+    """
+    # Create the log directory if it doesn't exist
+    if not os.path.exists(log_path):
+        os.makedirs(log_path)
+
+    # Set up logging
+    logger = logging.getLogger(log_name)
+    logger.setLevel(logging.DEBUG)
+
+    # Create a RotatingFileHandler
+    log_file = os.path.join(log_path, f"{log_filename}_{timestamp}.log")
+    handler = RotatingFileHandler(log_file, maxBytes=max_bytes, backupCount=backup_count)
+
+    # Create a formatter and set it for the handler
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+
+    # Add the handler to the logger
+    logger.addHandler(handler)
+
+    # Create a StreamHandler to print logs to the terminal
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)  # Adjust log level if needed
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+
+    return logger
