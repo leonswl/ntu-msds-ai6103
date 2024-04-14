@@ -225,7 +225,7 @@ def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres
     model, all_outs, corpus_ids = train_lstm(corpus, word_id_map, train_size, valid_size, labels, args.embed_size, args.hidden_size, args.dropout, args.batch_size, args.epochs, args.lr, args.weight_decay, num_labels,device, args.max_len, args.dataset, graphs_saved_path, args.num_layers)
     logger.info("Training LSTM completed")
 
-    logger.info("all_outs:\n {}".format(all_outs))
+--    logger.info("all_outs:\n {}".format(all_outs))
 
     num_docs = all_outs.shape[0]
     test_ids = corpus_ids[train_size+valid_size:,:]

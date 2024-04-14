@@ -34,6 +34,9 @@ def parse_args(args=None):
     parser.add_argument('--no_sparse', action='store_true')
     parser.add_argument("--load_ckpt", action='store_true')
     parser.add_argument('--featureless', action='store_true')
+    parser.add_argument('--use_sem', action='store_true')
+    parser.add_argument('--use_syn', action='store_true')
+    parser.add_argument('--use_seq', action='store_true')
     parser.add_argument("--save_path", type=str, default='./saved_model', help="the path of saved model")
     parser.add_argument('--dataset', type=str, default='mr', help='dataset name, default to mr')
     parser.add_argument('--model', type=str, default='gcn', help='model name, default to gcn')
@@ -233,30 +236,32 @@ def main(args, timestamp):
     if device == 'cuda':
         torch.cuda.manual_seed(seed)
     # Load data
-    adj, adj1, adj2, y_train, y_val, y_test, train_mask, val_mask, test_mask, train_size, val_size,test_size, num_labels = load_corpus_torch(args, device)
-    adj = adj.tocoo()
-    adj1 = adj1.tocoo()
-    adj2 = adj2.tocoo()
-    logger.debug("adj:")
-    logger.debug("\n {}".format(adj))
+    # adj, adj1, adj2, y_train, y_val, y_test, train_mask, val_mask, test_mask, train_size, val_size,test_size, num_labels = load_corpus_torch(args, device)
+    adj_lst, y_train, y_val, y_test, train_mask, val_mask, test_mask, train_size, val_size,test_size, num_labels = load_corpus_torch(args, device)
+    # for adj in adj_lst:
+    #     adj = adj.tocoo()
+    # adj = adj.tocoo()
+    # adj1 = adj1.tocoo()
+    # adj2 = adj2.tocoo()
+    logger.debug("adj:\n {}".format(adj_lst[0]))
 
-    logger.info("The shape of adj is {}".format(adj.shape))
+    logger.info("The shape of adj is {}".format(adj_lst[0].shape))
 
     # one-hot features
     # features = torch.eye(adj.shape[0], dtype=torch.float).to_sparse().to(device)
-    support_mix = [adj, adj1, adj2]
+    # support_mix = [adj, adj1, adj2]
+    # support_mix = adj_lst
     indice_list, weight_list = [] , []
-    for adjacency in support_mix:
+    for adjacency in adj_lst:
+        adjacency = adjacency.tocoo()
         ind, dat = get_edge_tensor(adjacency)
         indice_list.append(ind.to(device))
         weight_list.append(dat.to(device))
         
-    in_dim = adj.shape[0]
-    model = TGCN(in_dim=in_dim, hidden_dim=args.hidden, out_dim=num_labels,
-        num_graphs=3, dropout=args.dropout, n_layers=args.layers, bias=False, featureless=args.featureless)
+    in_dim = adj_lst[0].shape[0]
+    model = TGCN(in_dim=in_dim, hidden_dim=args.hidden, out_dim=num_labels, num_graphs=len(adj_lst), dropout=args.dropout, n_layers=args.layers, bias=False, featureless=args.featureless)
     features = torch.tensor(list(range(in_dim)), dtype=torch.long).to(device)
     
-
     model.to(device)
     
     if args.do_train:

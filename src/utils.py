@@ -10,6 +10,8 @@ import logging
 from logging.handlers import RotatingFileHandler
 import logging
 
+logger = logging.getLogger(__name__)
+
 
 def parse_index_file(filename):
     """Parse index file."""
@@ -42,16 +44,24 @@ def load_corpus_torch(args, device):
     All objects above must be saved using python pickle module.
 
     :param dataset_str: Dataset name
-    :return: All data input files loaded (as well the training/test data).
+    :returns All data input files loaded (as well the training/test data).
+    Returns: 
+        adj: sequential graph
+        adj1: semantic graph
+        adj2: syntactic graph
     """
 
     adjs = []
-    for one in ['seq','sem','syn']:
+    for adj in ['seq','sem','syn']:
+        logger.info("Loading {} graph".format(adj))
         if args.run_id is not None:
-            adjs.append(pkl.load(open('./saved_graphs/run_{}/{}.{}_adj'.format(args.run_id,args.dataset,one),'rb')))
+            try:
+                adjs.append(pkl.load(open('./saved_graphs/run_{}/{}.{}_adj'.format(args.run_id,args.dataset,adj),'rb')))
+                logger.info("Successfully loaded {} graph".format(adj))
+            except Exception as e:
+                logger.info('Unable to locate run_{}/{}.{}_adj in the directory'.format(args.run_id,args.dataset,adj))
         else: 
-            adjs.append(pkl.load(open('./data/{}.{}_adj'.format(args.dataset,one),'rb')))
-    adj, adj1, adj2 = adjs[0], adjs[1], adjs[2]
+            adjs.append(pkl.load(open('./data/{}.{}_adj'.format(args.dataset,adj),'rb')))
     
     data = json.load(open('./data/{}_data.json'.format(args.dataset),'r'))
     train_ids, test_ids, corpus, labels, vocab, word_id_map, id_word_map, label_list = data
@@ -81,9 +91,16 @@ def load_corpus_torch(args, device):
     y_val[val_mask] = labels[val_mask]
     y_test[test_mask] = labels[test_mask]
 
-    adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
-    adj1 = adj1 + adj1.T.multiply(adj1.T > adj1) - adj1.multiply(adj1.T > adj1)
-    adj2 = adj2 + adj2.T.multiply(adj2.T > adj2) - adj2.multiply(adj2.T > adj2)
+    
+
+    # seq, sem, syn = adjs[0], adjs[1], adjs[2]
+    adjs_new = []
+    for adj in adjs:
+        adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
+        adjs_new.append(adj)
+    # seq = seq + seq.T.multiply(seq.T > seq) - seq.multiply(seq.T > seq)
+    # sem = sem + sem.T.multiply(sem.T > sem) - sem.multiply(sem.T > sem)
+    # syn = syn + syn.T.multiply(syn.T > syn) - syn.multiply(syn.T > syn)
 
     # tensor
     # adj = torch.sparse_csr_tensor(adj.indptr, adj.indices, adj.data, dtype=torch.float).to_sparse_coo().to(device)
@@ -97,9 +114,14 @@ def load_corpus_torch(args, device):
     val_mask = torch.tensor(val_mask, dtype=torch.float).to(device)
     test_mask = torch.tensor(test_mask, dtype=torch.float).to(device)
 
-    return adj, adj1, adj2, y_train, y_val, y_test, train_mask, val_mask, test_mask, train_size, val_size,test_size, num_labels
+    return adjs_new, y_train, y_val, y_test, train_mask, val_mask, test_mask, train_size, val_size,test_size, num_labels
     
 def get_edge_tensor_list(adj_list, device):
+    """
+    
+    Args:
+        adj_list [list]: list of adjencies
+    """
     indice_list, data_list = [], []
     for adj in adj_list:
         row = torch.tensor(adj.row, dtype=torch.long).to(device)
@@ -244,7 +266,7 @@ def setup_logging(log_path, log_name, timestamp, log_filename='model', max_bytes
 
     # Create a StreamHandler to print logs to the terminal
     console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)  # Adjust log level if needed
+    console_handler.setLevel(logging.DEBUG)  # Adjust log level if needed
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
