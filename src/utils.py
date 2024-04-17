@@ -271,3 +271,29 @@ def setup_logging(log_path, log_name, timestamp, log_filename='model', max_bytes
     logger.addHandler(console_handler)
 
     return logger
+
+def pickle_artifact(args, filename, timestamp, artifact):
+
+    """
+    Function to pickle file 
+
+    Args:
+        args [args | class of args]: arguments
+        filename [str]: name of file to be pickled
+        timestamp [timestamp]: datetime of run_<timestamp> to store pickled file
+        artifact: any data artifact to be persisted
+
+    Returns:
+        None
+    """
+    # make directory if folder does not exist
+    if not os.path.exists(os.path.join(args.save_path,'run_{}'.format(timestamp))):
+        logger.info(os.path.join(args.save_path,'run_{}'.format(timestamp)))
+        os.makedirs(os.path.join(args.save_path,'run_{}'.format(timestamp)))
+
+    # pickle file to directory
+    try:
+        with open(os.path.join(args.save_path ,'run_{}/{}.pkl'.format(timestamp, filename)), 'wb') as f:
+            pkl.dump(artifact, f)
+    except Exception as e:
+        logger.info("There was an issue in pickling the file. Check the inputs again")

@@ -52,13 +52,15 @@ def parse_args(args=None):
     parser.add_argument("--run_id", default=None, type=str)
     return parser.parse_args(args)
 
+
+
 def save_model(model, optimizer, args, timestamp):
     '''
     Save the parameters of the model   the optimizer,
     as well as some other variables such as step and learning_rate
     '''
     if not os.path.exists(os.path.join(args.save_path,'run_{}'.format(timestamp))):
-        print(os.path.join(args.save_path,'run_{}'.format(timestamp)))
+        logger.info(os.path.join(args.save_path,'run_{}'.format(timestamp)))
         os.makedirs(os.path.join(args.save_path,'run_{}'.format(timestamp)))
     argparse_dict = vars(args)
     with open(os.path.join(args.save_path, 'run_{}/{}_config.json'.format(timestamp, args.model_name)), 'w') as fjson:
@@ -91,6 +93,9 @@ def train(args, features, train_label, train_mask, val_label, val_mask, test_lab
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     loss_fct = nn.CrossEntropyLoss(reduction='none')
     model.train()
+
+    store_time = []
+
     for epoch in range(args.epochs):
         
         t = time.time()
@@ -129,13 +134,17 @@ def train(args, features, train_label, train_mask, val_label, val_mask, test_lab
         acc_valid.append(valid_acc)
         acc_test.append(test_acc)
 
+        # time taken to perform training for 1 epoch
+        epoch_time = time.time() - t
+
         # logger.info("Epoch:", '%04d' % (epoch + 1), "train_loss=", "{:.5f}".format(loss.item()), "train_acc=",
         #     "{:.5f}".format(train_acc.item()), "val_loss=", "{:.5f}".format(valid_cost),
         #     "val_acc=", "{:.5f}".format(valid_acc), "test_loss=", "{:.5f}".format(test_cost), "test_acc=",
         #     "{:.5f}".format(test_acc), "time=", "{:.5f}".format(time.time() - t))
         logger.info("\n Epoch: {:04d} train_loss= {:.5f} train_acc= {:.5f} val_loss= {:.5f} val_acc= {:.5f} test_loss= {:.5f} test_acc= {:.5f} time= {:.5f}".format(
-        epoch + 1, loss.item(), train_acc.item(), valid_cost, valid_acc, test_cost, test_acc, time.time() - t))
+        epoch + 1, loss.item(), train_acc.item(), valid_cost, valid_acc, test_cost, test_acc, epoch_time))
 
+        store_time.append(epoch_time) # append to list of epoch time runs
 
         # save model
         # if epoch > 700 and cost_valid[-1] < min_cost:
@@ -158,6 +167,14 @@ def train(args, features, train_label, train_mask, val_label, val_mask, test_lab
         if epoch > args.early_stop and cost_valid[-1] > np.mean(cost_valid[-(args.early_stop + 1):-1]):
             logger.info("Early stopping...")
             break
+
+    # pickle store time 
+    pickle_artifact(
+        args=args,
+        filename='epoch_time',
+        timestamp=timestamp,
+        artifact=store_time
+        )
 
     if not saved_res:
         save_model(model, optimizer, args, timestamp)
@@ -270,6 +287,7 @@ def main(args, timestamp):
 
         with open(os.path.join(args.save_path ,'run_{}/{}_train_results.pkl'.format(timestamp, args.model_name)), 'wb') as f:
             pkl.dump(results, f)
+
         logger.info("Successfully pickled file '{}_train_results.pkl' with loss and accuracy metrics to {}".format(args.model_name, args.save_path))
 
     if args.do_valid:
