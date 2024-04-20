@@ -25,6 +25,8 @@ from torch.utils.data import TensorDataset, RandomSampler, SequentialSampler, Da
 from utils import pickle_graph, set_torch_seed, setup_logging
 
 
+
+
 class LSTM_classifier(nn.Module):
     def __init__(self, vocab_size, emb_size, hidden_size, num_labels, dropout, num_layers=1) -> None:
         super().__init__()
@@ -223,13 +225,15 @@ def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres
 
     # training LSTM
     model, all_outs, corpus_ids = train_lstm(corpus, word_id_map, train_size, valid_size, labels, args.embed_size, args.hidden_size, args.dropout, args.batch_size, args.epochs, args.lr, args.weight_decay, num_labels,device, args.max_len, args.dataset, graphs_saved_path, args.num_layers)
+
     logger.info("Training LSTM completed")
 
---    logger.info("all_outs:\n {}".format(all_outs))
+    logger.info("all_outs:\n {}".format(all_outs))
 
     num_docs = all_outs.shape[0]
     test_ids = corpus_ids[train_size+valid_size:,:]
     cos_simi_count = {}
+
     for i in tqdm(range(num_docs)):
         text = corpus[i]
         word_list = text.split()
@@ -285,6 +289,7 @@ def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres
     adj = sp.csr_matrix(
         (weight, (row, col)), shape=(node_size, node_size))
     logger.info("Semantic graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
+
     return adj
 
 def gen_seq(corpus, train_size, test_size, window_size, word_id_map, row_tfidf, col_tfidf, weight_tfidf, vocab):

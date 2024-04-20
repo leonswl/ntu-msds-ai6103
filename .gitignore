@@ -3,9 +3,9 @@
 *20ng.sem_adj
 *20ng.seq_adj
 *20ng.syn_adj
-*R8.sem_adj
-*R8.seq_adj
-*R8.syn_adj
+*sem_adj
+*seq_adj
+*syn_adj
 *.aml*
 *model.bin
 *model_test.bin
