@@ -224,7 +224,7 @@ def gen_sem(args, corpus, word_id_map, row_tfidf, col_tfidf, weight_tfidf, thres
     t = time.time()
 
     # training LSTM
-    model, all_outs, corpus_ids = train_lstm(corpus, word_id_map, train_size, valid_size, labels, args.embed_size, args.hidden_size, args.dropout, args.batch_size, args.epochs, args.lr, args.weight_decay, num_labels,device, args.max_len, args.dataset, graphs_saved_path, args.num_layers)
+    model, all_outs, corpus_ids = train_lstm(corpus, word_id_map, train_size, valid_size, labels, args.embed_size, args.hidden_size, args.dropout, args.batch_size, args.epochs, args.lr, args.weight_decay, num_labels,device, args.max_len, args.dataset, graphs_saved_path, args.lstm_layers)
 
     logger.info("Training LSTM completed")
 
@@ -601,7 +601,7 @@ def parse_args(args=None):
     parser.add_argument("--seed", default=32, type=int)
     parser.add_argument("--corenlp", default='./stanford-corenlp-4.5.0')
     parser.add_argument('--thres', default=0.05, type=float, help="the threshold of semantic graph")
-    parser.add_argument('--num_layers', default=1, type=int, help="number of layers in LSTM")
+    parser.add_argument('--lstm_layers', default=1, type=int, help="number of layers in LSTM")
     return parser.parse_args(args)
 
 if __name__ == '__main__':
