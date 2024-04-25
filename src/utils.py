@@ -9,9 +9,51 @@ import time
 import logging
 from logging.handlers import RotatingFileHandler
 import logging
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 logger = logging.getLogger(__name__)
 
+def plot_loss_acc(train_loss, val_loss, test_loss, train_acc, val_acc, test_acc, fig_name, header):
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import os
+
+    x = np.arange(len(train_loss))
+    max_loss = max(max(train_loss), max(val_loss), max(test_loss))  # Include test_loss in max calculation
+
+    fig, ax1 = plt.subplots(figsize=(10, 6))  # Increase the size for better readability
+    ax1.set_xlabel('Epoch')
+    ax1.set_ylabel('Loss', color='tab:blue')  # Add color to the loss axis
+    ax1.set_ylim([0, max_loss + 1])
+    lns1 = ax1.plot(x, train_loss, 'b-', marker='o', label='Train Loss')  # Use solid lines and markers
+    lns2 = ax1.plot(x, val_loss, 'g-', marker='o', label='Validation Loss')
+    lns3 = ax1.plot(x, test_loss, 'r-', marker='o', label='Test Loss')
+    ax1.tick_params(axis='y', labelcolor='tab:blue')
+
+    ax2 = ax1.twinx()  # Create a second y-axis for the accuracy
+    ax2.set_ylabel('Accuracy', color='tab:red')  # Add color to the accuracy axis
+    ax2.set_ylim([0, 1])
+    lns4 = ax2.plot(x, train_acc, 'b--', marker='s', label='Train Accuracy')  # Use dashed lines and square markers
+    lns5 = ax2.plot(x, val_acc, 'g--', marker='s', label='Validation Accuracy')
+    lns6 = ax2.plot(x, test_acc, 'r--', marker='s', label='Test Accuracy')
+    ax2.tick_params(axis='y', labelcolor='tab:red')
+
+    # Combine legends from both axes
+    lns = lns1 + lns2 + lns3 + lns4 + lns5 + lns6
+    labs = [l.get_label() for l in lns]
+    ax1.legend(lns, labs, loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=3, shadow=True)  # Move legend below x-axis
+
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])  # Adjust layout to make room for the legend below the x-axis
+    plt.title(header)
+
+    # Create the directory if it does not exist and save the plot and data
+    directory = './diagrams'
+    os.makedirs(directory, exist_ok=True)
+    plt.savefig(os.path.join(directory, fig_name))
+    np.savez(os.path.join(directory, fig_name.replace('.png', '.npz')), 
+             train_loss=train_loss, val_loss=val_loss, train_acc=train_acc, val_acc=val_acc, test_acc=test_acc)
 
 def parse_index_file(filename):
     """Parse index file."""
