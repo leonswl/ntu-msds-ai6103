@@ -121,6 +121,152 @@ def gen_syn(corpus, nlp:StanfordCoreNLP, row_tfidf, col_tfidf, weight_tfidf, wor
     logger.info("Syntactic graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
     return adj
 
+def gen_syn_bidirect(corpus, nlp: StanfordCoreNLP, row_tfidf, col_tfidf, weight_tfidf, word_id_map, node_size, train_size):
+    '''
+    Calculate syntactic relationship over words in the corpus with bidirectional edge weights.
+    Input:
+        corpus: a list that contains sentences/documents (strings)
+        pmi: a dict that maps word pair to pmi
+    '''
+   
+    t = time.time()
+    stop_words = set(stopwords.words('english'))
+
+    rela_pair_count_str = {} 
+    for doc_id in tqdm(range(len(corpus))):
+        words = corpus[doc_id]
+        words = words.split("\n")
+        rela=[]
+        for window in words:
+            if not window.strip():
+                continue
+            window = window.replace(string.punctuation, ' ')
+            try:
+                r_dict = nlp._request('depparse', window)
+            except json.decoder.JSONDecodeError:
+                continue
+            res = [(dep['governorGloss'], dep['dependentGloss']) for s in r_dict['sentences'] for dep in
+                   s['basicDependencies']]
+            for tuple in res:
+                rela.append(tuple[0] + ', ' + str(tuple[1]))
+            for pair in rela:
+                pair = pair.split(", ")
+                if 'ROOT' in pair:
+                    continue
+                if pair[0] == pair[1] or pair[0] in string.punctuation or pair[1] in string.punctuation:
+                    continue
+                if pair[0] in stop_words or pair[1] in stop_words:
+                    continue
+                # Increment weight for both orders simultaneously
+                for perm in [(pair[0], pair[1]), (pair[1], pair[0])]:
+                    word_pair_str = perm[0] + ',' + perm[1]
+                    if word_pair_str in rela_pair_count_str:
+                        rela_pair_count_str[word_pair_str] += 1
+                    else:
+                        rela_pair_count_str[word_pair_str] = 1
+
+    max_count = max(rela_pair_count_str.values(), default=0)
+    min_count = min(rela_pair_count_str.values(), default=0)
+    
+    graph = []
+    row, col = [], []
+    for key, count in rela_pair_count_str.items():
+        temp = key.split(',')
+        if temp[0] not in word_id_map or temp[1] not in word_id_map:
+            continue
+        i = word_id_map[temp[0]]
+        j = word_id_map[temp[1]]
+        normalized_weight = (count - min_count) / (max_count - min_count)
+        row.extend([train_size + i, train_size + j])
+        col.extend([train_size + j, train_size + i])  # Ensure symmetric indices
+        graph.extend([normalized_weight, normalized_weight])  # Ensure symmetric weights
+    
+    weight = graph + weight_tfidf
+    num_edges = len(row)
+    row = row + row_tfidf
+    col = col + col_tfidf
+    adj = sp.csr_matrix((weight, (row, col)), shape=(node_size, node_size))    
+    print("Syntactic graph finished! Time spent {:.2f} seconds, number of edges {}".format(time.time()-t, num_edges))
+    
+    return adj
+    
+def gen_syn_tfidf_scaling(corpus, nlp:StanfordCoreNLP, row_tfidf, col_tfidf, weight_tfidf, word_id_map, node_size, train_size):
+    '''
+    calculate syntactic relationship over words in the corpus
+    input:
+        corpus: a list that contains sentences/documents (strings)
+        pmi: a dict that maps word pair to pmi
+    '''
+    t = time.time()
+    stop_words = set(stopwords.words('english'))
+
+    #获取句法依存关系对
+    rela_pair_count_str = {} 
+    tfidf_map = {(row_tfidf[i], col_tfidf[i]): weight_tfidf[i] for i in range(len(weight_tfidf))}
+    for doc_id in tqdm(range(len(corpus))):
+        # print(doc_id)
+        words = corpus[doc_id]
+        words = words.split("\n")
+        rela=[]
+        for window in words:
+            if not window.strip():
+                continue
+            #构造rela_pair_count
+            window = window.replace(string.punctuation, ' ')
+            try:
+                r_dict = nlp._request('depparse', window)
+            except json.decoder.JSONDecodeError:
+                continue
+            res = [(dep['governorGloss'], dep['dependentGloss']) for s in r_dict['sentences'] for dep in
+            s['basicDependencies']]
+            for tuple in res:
+                rela.append(tuple[0] + ', ' + str(tuple[1]))
+            for pair in rela:
+                pair=pair.split(", ")
+                if pair[0]=='ROOT' or pair[1]=='ROOT':
+                    continue
+                if pair[0] == pair[1]:
+                    continue
+                if pair[0] in string.punctuation or pair[1] in string.punctuation:
+                    continue
+                if pair[0] in stop_words or pair[1] in stop_words:
+                    continue
+                word_pair_str = pair[0] + ',' + pair[1]
+                if word_pair_str in rela_pair_count_str:
+                    rela_pair_count_str[word_pair_str] += 1
+                else:
+                    rela_pair_count_str[word_pair_str] = 1
+                # two orders
+                word_pair_str = pair[1] + ',' + pair[0]
+                if word_pair_str in rela_pair_count_str:
+                    rela_pair_count_str[word_pair_str] += 1
+                else:
+                    rela_pair_count_str[word_pair_str] = 1
+    max_count = max(rela_pair_count_str.values(), default=1)
+    min_count = min(rela_pair_count_str.values(), default=0)
+    
+    graph = []
+    row, col = [], []
+    for key, count in rela_pair_count_str.items():
+        temp = key.split(',')
+        if temp[0] not in word_id_map or temp[1] not in word_id_map:
+            continue
+        i = word_id_map[temp[0]]
+        j = word_id_map[temp[1]]
+        row.extend([train_size + i, train_size + j])
+        col.extend([train_size + j, train_size + i])
+        base_weight = (count - min_count) / (max_count - min_count)
+
+        # Apply TF-IDF scaling
+        tfidf_weight1 = tfidf_map.get((train_size + i, train_size + j), 0)
+        tfidf_weight2 = tfidf_map.get((train_size + j, train_size + i), 0)
+        weight = base_weight * (tfidf_weight1 + tfidf_weight2) / 2
+        graph.extend([weight, weight])
+    num_edges = len(row)
+    adj = sp.csr_matrix((graph, (row, col)), shape=(node_size, node_size))
+    print("Syntactic graph finish! Time spent {:2f} number of edges {}".format(time.time()-t, num_edges))
+    return adj
+
 def trans_corpus_to_ids(corpus, word_id_map, max_len):
     new_corpus = []
     for text in corpus:
@@ -566,6 +712,25 @@ def main(args, timestamp):
             dataset=args.dataset, 
             graph_adj=syn_adj,
             graph_saved_path=graphs_saved_path)
+    
+    # generate syntatic graph with bidirectional weights if true
+    if args.gen_syn_bidirect:
+        syn_adj_bi = gen_syn_bidirect(corpus, nlp, row_tfidf, col_tfidf, weight_tfidf, word_id_map, len(train_ids)+len(vocab)+len(test_ids), len(train_ids))
+         # pickle graph object
+        pickle_graph(
+            graph_type='syntactic', 
+            dataset=args.dataset, 
+            graph_adj=syn_adj_bi,
+            graph_saved_path=graphs_saved_path)
+    
+    # generate syntatic graph with bidirectional weights and tfidf scaling if true    
+    if args.gen_syn_tfidf_scaling:
+        syn_adj_tfidf = gen_syn_tfidf_scaling(corpus, nlp, row_tfidf, col_tfidf, weight_tfidf, word_id_map, len(train_ids)+len(vocab)+len(test_ids), len(train_ids))
+       pickle_graph(
+            graph_type='syntactic', 
+            dataset=args.dataset, 
+            graph_adj=syn_adj_tfidf,
+            graph_saved_path=graphs_saved_path)
 
     # generate semantic graph if true
     if args.gen_sem:
@@ -586,6 +751,8 @@ def parse_args(args=None):
         usage='train.py [<args>] [-h | --help]'
     )
     parser.add_argument('--gen_syn', action='store_true')
+    parser.add_argument('--gen_syn_tfidf_scaling', action='store_true')
+    parser.add_argument('--gen_syn_bidirect', action='store_true')
     parser.add_argument('--gen_sem', action='store_true')
     parser.add_argument('--gen_seq', action='store_true')
     parser.add_argument('--dataset', type=str, default='mr')
