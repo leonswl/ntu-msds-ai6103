@@ -46,7 +46,7 @@ def parse_args(args=None):
     parser.add_argument("--layers", default=2, type=int)
     parser.add_argument("--dropout", default=0.8, type=float)   # 0.5/0.3/0.1
     parser.add_argument("--weight_decay", default=0.000001, type=float)
-    parser.add_argument("--early_stop", default=100, type=int)
+    parser.add_argument("--early_stop", default=300, type=int)
     parser.add_argument("--max_degree", default=3, type=int)
     parser.add_argument("--model_name", default='model', type=str)
     parser.add_argument("--run_id", default=None, type=str)
