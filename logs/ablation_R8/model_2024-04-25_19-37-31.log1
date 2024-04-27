@@ -1,0 +1,1153 @@
+2024-04-25 11:37:31,277 - INFO - Training is running on CPU
+2024-04-25 11:37:31,280 - INFO - Seed used: 147
+2024-04-25 11:37:32,892 - DEBUG - adj:
+   (0, 5767)	1.8480444201921051
+  (0, 5947)	3.045695917224406
+  (0, 5961)	13.805363546859642
+  (0, 6258)	3.516247641852457
+  (0, 6324)	6.643008177812852
+  (0, 6328)	8.26583359486125
+  (0, 6427)	4.868055826901179
+  (0, 6470)	5.446034005471058
+  (0, 6492)	2.0141214652074444
+  (0, 6556)	1.93593634404461
+  (0, 6673)	1.3557517586242402
+  (0, 6982)	5.013767638082572
+  (0, 7161)	5.319190352596066
+  (0, 7326)	14.655450780781436
+  (0, 7642)	3.711032870061612
+  (0, 7677)	5.687496732785416
+  (0, 7679)	2.639317983858882
+  (0, 7706)	2.9541287236989158
+  (0, 8148)	2.87948518070315
+  (0, 8213)	1.2102745157814285
+  (0, 8695)	0.8247072497140591
+  (0, 9225)	5.256713816692962
+  (0, 9257)	10.588478605807433
+  (0, 9272)	0.686135075474489
+  (0, 9815)	5.901070833083475
+  :	:
+  (15361, 9092)	4.938260085574427
+  (15361, 9410)	10.413887408342985
+  (15361, 9421)	4.697098028757539
+  (15361, 9765)	3.948380997042783
+  (15361, 9767)	2.8610938577317264
+  (15361, 10007)	2.442803224891274
+  (15361, 10145)	4.956609224242623
+  (15361, 10150)	5.649756404802568
+  (15361, 10278)	5.256713816692962
+  (15361, 10610)	3.4241323529446515
+  (15361, 10809)	6.380643913345361
+  (15361, 10989)	6.380643913345361
+  (15361, 11250)	5.138930781036578
+  (15361, 11480)	4.456956901074758
+  (15361, 11499)	2.856548395360052
+  (15361, 11579)	0.09164216929228669
+  (15361, 11651)	4.851248708584797
+  (15361, 11726)	9.805084005944694
+  (15361, 11895)	6.342083450524979
+  (15361, 12178)	3.307238601473152
+  (15361, 12502)	4.166469777695369
+  (15361, 12528)	3.9416469648614387
+  (15361, 12587)	3.1195931634264475
+  (15361, 12637)	28.386708998096005
+  (15361, 13025)	5.074392259899007
+2024-04-25 11:37:32,902 - INFO - The shape of adj is (15362, 15362)
+2024-04-25 11:37:33,150 - INFO - Starting training
+2024-04-25 11:37:38,935 - INFO - 
+ Epoch: 0001 train_loss= 110.30927 train_acc= 0.03767 val_loss= 42.78930 val_acc= 0.04745 test_loss= 38.57048 test_acc= 0.03746 time= 5.78148
+2024-04-25 11:37:44,668 - INFO - 
+ Epoch: 0002 train_loss= 125.34335 train_acc= 0.03383 val_loss= 39.97079 val_acc= 0.04745 test_loss= 35.95058 test_acc= 0.03792 time= 5.73039
+2024-04-25 11:37:50,945 - INFO - 
+ Epoch: 0003 train_loss= 124.32056 train_acc= 0.02552 val_loss= 36.40138 val_acc= 0.04562 test_loss= 32.68956 test_acc= 0.03837 time= 6.27288
+2024-04-25 11:37:56,677 - INFO - 
+ Epoch: 0004 train_loss= 129.39050 train_acc= 0.04983 val_loss= 32.45465 val_acc= 0.04562 test_loss= 29.10789 test_acc= 0.03700 time= 5.72885
+2024-04-25 11:38:02,421 - INFO - 
+ Epoch: 0005 train_loss= 99.76542 train_acc= 0.03646 val_loss= 28.88870 val_acc= 0.04745 test_loss= 25.87418 test_acc= 0.03883 time= 5.73935
+2024-04-25 11:38:08,159 - INFO - 
+ Epoch: 0006 train_loss= 114.57722 train_acc= 0.02937 val_loss= 25.76567 val_acc= 0.05839 test_loss= 23.07088 test_acc= 0.04249 time= 5.73188
+2024-04-25 11:38:13,722 - INFO - 
+ Epoch: 0007 train_loss= 100.03519 train_acc= 0.03565 val_loss= 23.12609 val_acc= 0.05292 test_loss= 20.72217 test_acc= 0.04477 time= 5.56021
+2024-04-25 11:38:19,526 - INFO - 
+ Epoch: 0008 train_loss= 123.52164 train_acc= 0.03565 val_loss= 20.87433 val_acc= 0.06022 test_loss= 18.75518 test_acc= 0.04660 time= 5.80036
+2024-04-25 11:38:25,614 - INFO - 
+ Epoch: 0009 train_loss= 101.31791 train_acc= 0.02775 val_loss= 19.13678 val_acc= 0.06387 test_loss= 17.26997 test_acc= 0.04660 time= 6.08443
+2024-04-25 11:38:31,138 - INFO - 
+ Epoch: 0010 train_loss= 87.21854 train_acc= 0.02026 val_loss= 18.07763 val_acc= 0.06387 test_loss= 16.32562 test_acc= 0.04614 time= 5.52043
+2024-04-25 11:38:36,818 - INFO - 
+ Epoch: 0011 train_loss= 99.15303 train_acc= 0.03038 val_loss= 17.23155 val_acc= 0.06387 test_loss= 15.63034 test_acc= 0.04249 time= 5.67673
+2024-04-25 11:38:42,475 - INFO - 
+ Epoch: 0012 train_loss= 88.63294 train_acc= 0.06340 val_loss= 16.53819 val_acc= 0.06204 test_loss= 15.06317 test_acc= 0.03929 time= 5.65226
+2024-04-25 11:38:48,335 - INFO - 
+ Epoch: 0013 train_loss= 94.84138 train_acc= 0.03565 val_loss= 16.03938 val_acc= 0.06022 test_loss= 14.59641 test_acc= 0.03929 time= 5.85677
+2024-04-25 11:38:54,414 - INFO - 
+ Epoch: 0014 train_loss= 94.91370 train_acc= 0.05752 val_loss= 15.64791 val_acc= 0.05839 test_loss= 14.24348 test_acc= 0.04157 time= 6.07653
+2024-04-25 11:39:00,038 - INFO - 
+ Epoch: 0015 train_loss= 76.36647 train_acc= 0.04578 val_loss= 15.43807 val_acc= 0.06022 test_loss= 13.97713 test_acc= 0.04157 time= 5.62019
+2024-04-25 11:39:05,532 - INFO - 
+ Epoch: 0016 train_loss= 80.10456 train_acc= 0.03484 val_loss= 15.21092 val_acc= 0.05657 test_loss= 13.61007 test_acc= 0.04523 time= 5.49068
+2024-04-25 11:39:11,207 - INFO - 
+ Epoch: 0017 train_loss= 68.82386 train_acc= 0.07029 val_loss= 15.17383 val_acc= 0.05474 test_loss= 13.35370 test_acc= 0.04751 time= 5.67157
+2024-04-25 11:39:16,871 - INFO - 
+ Epoch: 0018 train_loss= 80.10153 train_acc= 0.03828 val_loss= 15.20308 val_acc= 0.05292 test_loss= 13.15346 test_acc= 0.04888 time= 5.65900
+2024-04-25 11:39:22,622 - INFO - 
+ Epoch: 0019 train_loss= 81.41240 train_acc= 0.04355 val_loss= 15.27181 val_acc= 0.05109 test_loss= 12.98106 test_acc= 0.05254 time= 5.74712
+2024-04-25 11:39:29,022 - INFO - 
+ Epoch: 0020 train_loss= 64.26832 train_acc= 0.05246 val_loss= 15.27698 val_acc= 0.05292 test_loss= 12.76229 test_acc= 0.05756 time= 6.39663
+2024-04-25 11:39:34,643 - INFO - 
+ Epoch: 0021 train_loss= 65.95390 train_acc= 0.07636 val_loss= 15.30139 val_acc= 0.05292 test_loss= 12.55774 test_acc= 0.07081 time= 5.61858
+2024-04-25 11:39:40,251 - INFO - 
+ Epoch: 0022 train_loss= 55.58755 train_acc= 0.11829 val_loss= 15.19033 val_acc= 0.06387 test_loss= 12.24231 test_acc= 0.09182 time= 5.60494
+2024-04-25 11:39:45,926 - INFO - 
+ Epoch: 0023 train_loss= 54.44373 train_acc= 0.13834 val_loss= 15.07894 val_acc= 0.07664 test_loss= 11.93620 test_acc= 0.11923 time= 5.67156
+2024-04-25 11:39:51,472 - INFO - 
+ Epoch: 0024 train_loss= 55.27737 train_acc= 0.11971 val_loss= 14.96503 val_acc= 0.10036 test_loss= 11.65705 test_acc= 0.15624 time= 5.54233
+2024-04-25 11:39:57,012 - INFO - 
+ Epoch: 0025 train_loss= 64.60690 train_acc= 0.07251 val_loss= 14.87337 val_acc= 0.12774 test_loss= 11.42560 test_acc= 0.20877 time= 5.53712
+2024-04-25 11:40:03,168 - INFO - 
+ Epoch: 0026 train_loss= 66.62256 train_acc= 0.08568 val_loss= 14.89466 val_acc= 0.16423 test_loss= 11.29675 test_acc= 0.25171 time= 6.15227
+2024-04-25 11:40:08,779 - INFO - 
+ Epoch: 0027 train_loss= 57.64383 train_acc= 0.06299 val_loss= 14.87741 val_acc= 0.19526 test_loss= 11.17367 test_acc= 0.30196 time= 5.60759
+2024-04-25 11:40:14,415 - INFO - 
+ Epoch: 0028 train_loss= 46.32638 train_acc= 0.11870 val_loss= 14.77952 val_acc= 0.24088 test_loss= 11.02042 test_acc= 0.34354 time= 5.63357
+2024-04-25 11:40:19,936 - INFO - 
+ Epoch: 0029 train_loss= 58.00206 train_acc= 0.05327 val_loss= 14.74496 val_acc= 0.30292 test_loss= 10.91451 test_acc= 0.38511 time= 5.51506
+2024-04-25 11:40:25,463 - INFO - 
+ Epoch: 0030 train_loss= 47.72670 train_acc= 0.22038 val_loss= 14.75789 val_acc= 0.34489 test_loss= 10.84645 test_acc= 0.42759 time= 5.52392
+2024-04-25 11:40:31,076 - INFO - 
+ Epoch: 0031 train_loss= 48.02423 train_acc= 0.13956 val_loss= 14.74189 val_acc= 0.37956 test_loss= 10.76676 test_acc= 0.46277 time= 5.60858
+2024-04-25 11:40:37,005 - INFO - 
+ Epoch: 0032 train_loss= 39.19038 train_acc= 0.33482 val_loss= 14.56900 val_acc= 0.39964 test_loss= 10.57924 test_acc= 0.48698 time= 5.92498
+2024-04-25 11:40:42,516 - INFO - 
+ Epoch: 0033 train_loss= 49.73956 train_acc= 0.13470 val_loss= 14.42323 val_acc= 0.41606 test_loss= 10.42749 test_acc= 0.50708 time= 5.50870
+2024-04-25 11:40:48,180 - INFO - 
+ Epoch: 0034 train_loss= 52.59903 train_acc= 0.14280 val_loss= 14.33648 val_acc= 0.42883 test_loss= 10.31806 test_acc= 0.52398 time= 5.66097
+2024-04-25 11:40:53,697 - INFO - 
+ Epoch: 0035 train_loss= 35.99430 train_acc= 0.31112 val_loss= 14.21900 val_acc= 0.43978 test_loss= 10.19319 test_acc= 0.54043 time= 5.51047
+2024-04-25 11:40:59,278 - INFO - 
+ Epoch: 0036 train_loss= 68.58050 train_acc= 0.04335 val_loss= 14.00555 val_acc= 0.46533 test_loss= 10.02217 test_acc= 0.56190 time= 5.57856
+2024-04-25 11:41:05,521 - INFO - 
+ Epoch: 0037 train_loss= 60.55296 train_acc= 0.08730 val_loss= 13.92365 val_acc= 0.47263 test_loss= 9.96131 test_acc= 0.57515 time= 6.23932
+2024-04-25 11:41:11,497 - INFO - 
+ Epoch: 0038 train_loss= 50.20326 train_acc= 0.10107 val_loss= 13.72107 val_acc= 0.49635 test_loss= 9.83102 test_acc= 0.59114 time= 5.97377
+2024-04-25 11:41:17,864 - INFO - 
+ Epoch: 0039 train_loss= 43.88526 train_acc= 0.20600 val_loss= 13.57276 val_acc= 0.51642 test_loss= 9.74966 test_acc= 0.60119 time= 6.36329
+2024-04-25 11:41:23,610 - INFO - 
+ Epoch: 0040 train_loss= 49.77753 train_acc= 0.10837 val_loss= 13.47751 val_acc= 0.52555 test_loss= 9.72015 test_acc= 0.61626 time= 5.74269
+2024-04-25 11:41:29,202 - INFO - 
+ Epoch: 0041 train_loss= 42.40976 train_acc= 0.16994 val_loss= 13.32787 val_acc= 0.54197 test_loss= 9.64695 test_acc= 0.63728 time= 5.58914
+2024-04-25 11:41:34,986 - INFO - 
+ Epoch: 0042 train_loss= 47.05357 train_acc= 0.09905 val_loss= 13.15987 val_acc= 0.54927 test_loss= 9.58000 test_acc= 0.65053 time= 5.78123
+2024-04-25 11:41:41,308 - INFO - 
+ Epoch: 0043 train_loss= 43.24611 train_acc= 0.26048 val_loss= 12.92933 val_acc= 0.57117 test_loss= 9.47181 test_acc= 0.67017 time= 6.31895
+2024-04-25 11:41:46,966 - INFO - 
+ Epoch: 0044 train_loss= 35.84288 train_acc= 0.22342 val_loss= 12.67304 val_acc= 0.58942 test_loss= 9.36833 test_acc= 0.68479 time= 5.65500
+2024-04-25 11:41:52,694 - INFO - 
+ Epoch: 0045 train_loss= 41.15311 train_acc= 0.20802 val_loss= 12.37728 val_acc= 0.61314 test_loss= 9.25503 test_acc= 0.69758 time= 5.72442
+2024-04-25 11:41:58,254 - INFO - 
+ Epoch: 0046 train_loss= 51.51763 train_acc= 0.17642 val_loss= 12.14218 val_acc= 0.62956 test_loss= 9.19048 test_acc= 0.71402 time= 5.55560
+2024-04-25 11:42:03,900 - INFO - 
+ Epoch: 0047 train_loss= 38.10834 train_acc= 0.32955 val_loss= 11.99361 val_acc= 0.63869 test_loss= 9.19427 test_acc= 0.72179 time= 5.64270
+2024-04-25 11:42:09,951 - INFO - 
+ Epoch: 0048 train_loss= 35.92255 train_acc= 0.28864 val_loss= 11.84637 val_acc= 0.64781 test_loss= 9.19739 test_acc= 0.73184 time= 6.04882
+2024-04-25 11:42:15,734 - INFO - 
+ Epoch: 0049 train_loss= 44.10894 train_acc= 0.32773 val_loss= 11.76885 val_acc= 0.65511 test_loss= 9.21714 test_acc= 0.73778 time= 5.77929
+2024-04-25 11:42:21,612 - INFO - 
+ Epoch: 0050 train_loss= 36.95432 train_acc= 0.20356 val_loss= 11.79595 val_acc= 0.66606 test_loss= 9.28352 test_acc= 0.74280 time= 5.87496
+2024-04-25 11:42:27,166 - INFO - 
+ Epoch: 0051 train_loss= 42.75312 train_acc= 0.21187 val_loss= 11.86590 val_acc= 0.66788 test_loss= 9.39221 test_acc= 0.74189 time= 5.55150
+2024-04-25 11:42:32,783 - INFO - 
+ Epoch: 0052 train_loss= 32.21374 train_acc= 0.49504 val_loss= 11.91873 val_acc= 0.67336 test_loss= 9.49009 test_acc= 0.74189 time= 5.61188
+2024-04-25 11:42:38,380 - INFO - 
+ Epoch: 0053 train_loss= 32.92282 train_acc= 0.40065 val_loss= 11.98419 val_acc= 0.68066 test_loss= 9.60188 test_acc= 0.73869 time= 5.59349
+2024-04-25 11:42:44,515 - INFO - 
+ Epoch: 0054 train_loss= 36.96022 train_acc= 0.30747 val_loss= 12.07597 val_acc= 0.68796 test_loss= 9.72889 test_acc= 0.73047 time= 6.13252
+2024-04-25 11:42:50,124 - INFO - 
+ Epoch: 0055 train_loss= 39.76296 train_acc= 0.27993 val_loss= 12.13397 val_acc= 0.69161 test_loss= 9.79999 test_acc= 0.72727 time= 5.60516
+2024-04-25 11:42:55,479 - INFO - 
+ Epoch: 0056 train_loss= 26.81103 train_acc= 0.49706 val_loss= 12.19507 val_acc= 0.68978 test_loss= 9.88157 test_acc= 0.71951 time= 5.35185
+2024-04-25 11:43:00,975 - INFO - 
+ Epoch: 0057 train_loss= 36.04554 train_acc= 0.35548 val_loss= 12.15044 val_acc= 0.69891 test_loss= 9.89064 test_acc= 0.71722 time= 5.49274
+2024-04-25 11:43:06,626 - INFO - 
+ Epoch: 0058 train_loss= 37.19118 train_acc= 0.21227 val_loss= 12.12090 val_acc= 0.69526 test_loss= 9.90345 test_acc= 0.71083 time= 5.64498
+2024-04-25 11:43:12,333 - INFO - 
+ Epoch: 0059 train_loss= 33.89330 train_acc= 0.25684 val_loss= 12.13683 val_acc= 0.68978 test_loss= 9.94508 test_acc= 0.70443 time= 5.70432
+2024-04-25 11:43:18,557 - INFO - 
+ Epoch: 0060 train_loss= 25.42585 train_acc= 0.41969 val_loss= 12.11861 val_acc= 0.68431 test_loss= 9.95979 test_acc= 0.69804 time= 6.22026
+2024-04-25 11:43:24,181 - INFO - 
+ Epoch: 0061 train_loss= 32.42445 train_acc= 0.43022 val_loss= 12.09308 val_acc= 0.68248 test_loss= 9.97265 test_acc= 0.69073 time= 5.62104
+2024-04-25 11:43:29,865 - INFO - 
+ Epoch: 0062 train_loss= 24.69385 train_acc= 0.50901 val_loss= 12.13729 val_acc= 0.67883 test_loss= 10.02191 test_acc= 0.68433 time= 5.68069
+2024-04-25 11:43:35,501 - INFO - 
+ Epoch: 0063 train_loss= 24.12690 train_acc= 0.47863 val_loss= 12.16133 val_acc= 0.67701 test_loss= 10.04311 test_acc= 0.68205 time= 5.63238
+2024-04-25 11:43:41,059 - INFO - 
+ Epoch: 0064 train_loss= 28.59445 train_acc= 0.48916 val_loss= 12.20957 val_acc= 0.67883 test_loss= 10.07771 test_acc= 0.68159 time= 5.55378
+2024-04-25 11:43:47,168 - INFO - 
+ Epoch: 0065 train_loss= 25.82795 train_acc= 0.53352 val_loss= 12.24502 val_acc= 0.67883 test_loss= 10.09886 test_acc= 0.68159 time= 6.10509
+2024-04-25 11:43:53,246 - INFO - 
+ Epoch: 0066 train_loss= 25.73450 train_acc= 0.52988 val_loss= 12.27651 val_acc= 0.67701 test_loss= 10.11165 test_acc= 0.68342 time= 6.07512
+2024-04-25 11:43:58,933 - INFO - 
+ Epoch: 0067 train_loss= 22.04922 train_acc= 0.56998 val_loss= 12.27411 val_acc= 0.67701 test_loss= 10.09714 test_acc= 0.68524 time= 5.68350
+2024-04-25 11:44:04,600 - INFO - 
+ Epoch: 0068 train_loss= 29.08555 train_acc= 0.54446 val_loss= 12.18796 val_acc= 0.67701 test_loss= 10.02236 test_acc= 0.68844 time= 5.66426
+2024-04-25 11:44:10,425 - INFO - 
+ Epoch: 0069 train_loss= 28.40908 train_acc= 0.39255 val_loss= 12.11933 val_acc= 0.68066 test_loss= 9.96322 test_acc= 0.69301 time= 5.82181
+2024-04-25 11:44:16,124 - INFO - 
+ Epoch: 0070 train_loss= 30.47239 train_acc= 0.56958 val_loss= 11.95785 val_acc= 0.68796 test_loss= 9.83894 test_acc= 0.69712 time= 5.69314
+2024-04-25 11:44:22,359 - INFO - 
+ Epoch: 0071 train_loss= 36.46691 train_acc= 0.26231 val_loss= 11.75724 val_acc= 0.69526 test_loss= 9.68843 test_acc= 0.70032 time= 6.23155
+2024-04-25 11:44:27,877 - INFO - 
+ Epoch: 0072 train_loss= 27.60905 train_acc= 0.46709 val_loss= 11.57153 val_acc= 0.69526 test_loss= 9.54505 test_acc= 0.70534 time= 5.51476
+2024-04-25 11:44:33,429 - INFO - 
+ Epoch: 0073 train_loss= 27.69532 train_acc= 0.52745 val_loss= 11.41034 val_acc= 0.69891 test_loss= 9.41711 test_acc= 0.70991 time= 5.54669
+2024-04-25 11:44:38,940 - INFO - 
+ Epoch: 0074 train_loss= 31.03276 train_acc= 0.32165 val_loss= 11.28854 val_acc= 0.69891 test_loss= 9.31777 test_acc= 0.71357 time= 5.50829
+2024-04-25 11:44:44,450 - INFO - 
+ Epoch: 0075 train_loss= 26.63939 train_acc= 0.53535 val_loss= 11.13124 val_acc= 0.70803 test_loss= 9.19212 test_acc= 0.72133 time= 5.50713
+2024-04-25 11:44:50,066 - INFO - 
+ Epoch: 0076 train_loss= 24.53913 train_acc= 0.55763 val_loss= 10.98691 val_acc= 0.71350 test_loss= 9.07542 test_acc= 0.72636 time= 5.61051
+2024-04-25 11:44:56,304 - INFO - 
+ Epoch: 0077 train_loss= 24.96711 train_acc= 0.54851 val_loss= 10.84631 val_acc= 0.71350 test_loss= 8.95365 test_acc= 0.73093 time= 6.23492
+2024-04-25 11:45:01,882 - INFO - 
+ Epoch: 0078 train_loss= 33.20152 train_acc= 0.52542 val_loss= 10.69640 val_acc= 0.71350 test_loss= 8.82309 test_acc= 0.73184 time= 5.57418
+2024-04-25 11:45:07,737 - INFO - 
+ Epoch: 0079 train_loss= 24.20867 train_acc= 0.56958 val_loss= 10.56478 val_acc= 0.71715 test_loss= 8.70328 test_acc= 0.73413 time= 5.85061
+2024-04-25 11:45:13,375 - INFO - 
+ Epoch: 0080 train_loss= 23.21994 train_acc= 0.55358 val_loss= 10.46659 val_acc= 0.71715 test_loss= 8.60661 test_acc= 0.73687 time= 5.63463
+2024-04-25 11:45:19,015 - INFO - 
+ Epoch: 0081 train_loss= 27.53532 train_acc= 0.52441 val_loss= 10.32950 val_acc= 0.71715 test_loss= 8.48627 test_acc= 0.73915 time= 5.63686
+2024-04-25 11:45:24,749 - INFO - 
+ Epoch: 0082 train_loss= 25.42333 train_acc= 0.50901 val_loss= 10.20013 val_acc= 0.71715 test_loss= 8.37960 test_acc= 0.74235 time= 5.73161
+2024-04-25 11:45:30,836 - INFO - 
+ Epoch: 0083 train_loss= 23.90613 train_acc= 0.57748 val_loss= 10.04891 val_acc= 0.71898 test_loss= 8.26096 test_acc= 0.74646 time= 6.08301
+2024-04-25 11:45:36,568 - INFO - 
+ Epoch: 0084 train_loss= 22.21288 train_acc= 0.57403 val_loss= 9.90481 val_acc= 0.72080 test_loss= 8.14671 test_acc= 0.75331 time= 5.72822
+2024-04-25 11:45:36,626 - INFO - ./saved_model/run_2024-04-25_19-37-31
+2024-04-25 11:45:36,832 - INFO - Configurations for training:
+2024-04-25 11:45:36,835 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:45:37,696 - INFO - Current best loss 9.90481
+2024-04-25 11:45:43,356 - INFO - 
+ Epoch: 0085 train_loss= 25.72003 train_acc= 0.53940 val_loss= 9.83407 val_acc= 0.72263 test_loss= 8.08255 test_acc= 0.76108 time= 5.65700
+2024-04-25 11:45:43,454 - INFO - Configurations for training:
+2024-04-25 11:45:43,456 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:45:44,268 - INFO - Current best loss 9.83407
+2024-04-25 11:45:49,926 - INFO - 
+ Epoch: 0086 train_loss= 23.39893 train_acc= 0.52258 val_loss= 9.74647 val_acc= 0.72628 test_loss= 8.00704 test_acc= 0.76610 time= 5.65523
+2024-04-25 11:45:50,048 - INFO - Configurations for training:
+2024-04-25 11:45:50,051 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:45:50,908 - INFO - Current best loss 9.74647
+2024-04-25 11:45:56,536 - INFO - 
+ Epoch: 0087 train_loss= 25.36063 train_acc= 0.50537 val_loss= 9.65773 val_acc= 0.72810 test_loss= 7.92885 test_acc= 0.76656 time= 5.62483
+2024-04-25 11:45:56,671 - INFO - Configurations for training:
+2024-04-25 11:45:56,675 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:45:57,841 - INFO - Current best loss 9.65773
+2024-04-25 11:46:03,929 - INFO - 
+ Epoch: 0088 train_loss= 22.53587 train_acc= 0.52441 val_loss= 9.55838 val_acc= 0.73175 test_loss= 7.84364 test_acc= 0.77113 time= 6.08523
+2024-04-25 11:46:04,101 - INFO - Configurations for training:
+2024-04-25 11:46:04,104 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:05,164 - INFO - Current best loss 9.55838
+2024-04-25 11:46:10,823 - INFO - 
+ Epoch: 0089 train_loss= 25.38750 train_acc= 0.48673 val_loss= 9.49959 val_acc= 0.73358 test_loss= 7.78647 test_acc= 0.77387 time= 5.65631
+2024-04-25 11:46:10,961 - INFO - Configurations for training:
+2024-04-25 11:46:10,963 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:12,310 - INFO - Current best loss 9.49959
+2024-04-25 11:46:17,901 - INFO - 
+ Epoch: 0090 train_loss= 23.22146 train_acc= 0.58720 val_loss= 9.42969 val_acc= 0.73358 test_loss= 7.72390 test_acc= 0.77661 time= 5.58833
+2024-04-25 11:46:17,997 - INFO - Configurations for training:
+2024-04-25 11:46:17,999 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:18,857 - INFO - Current best loss 9.42969
+2024-04-25 11:46:24,462 - INFO - 
+ Epoch: 0091 train_loss= 22.53893 train_acc= 0.54203 val_loss= 9.38528 val_acc= 0.73540 test_loss= 7.67915 test_acc= 0.77707 time= 5.60249
+2024-04-25 11:46:24,587 - INFO - Configurations for training:
+2024-04-25 11:46:24,589 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:25,559 - INFO - Current best loss 9.38528
+2024-04-25 11:46:31,757 - INFO - 
+ Epoch: 0092 train_loss= 24.15828 train_acc= 0.53372 val_loss= 9.33614 val_acc= 0.74088 test_loss= 7.62423 test_acc= 0.77889 time= 6.19512
+2024-04-25 11:46:31,912 - INFO - Configurations for training:
+2024-04-25 11:46:31,915 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:33,219 - INFO - Current best loss 9.33614
+2024-04-25 11:46:38,854 - INFO - 
+ Epoch: 0093 train_loss= 23.38086 train_acc= 0.56006 val_loss= 9.31252 val_acc= 0.74453 test_loss= 7.59121 test_acc= 0.78072 time= 5.63247
+2024-04-25 11:46:38,969 - INFO - Configurations for training:
+2024-04-25 11:46:38,972 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:40,040 - INFO - Current best loss 9.31252
+2024-04-25 11:46:45,522 - INFO - 
+ Epoch: 0094 train_loss= 20.37625 train_acc= 0.49868 val_loss= 9.30317 val_acc= 0.74635 test_loss= 7.57105 test_acc= 0.78301 time= 5.47933
+2024-04-25 11:46:45,635 - INFO - Configurations for training:
+2024-04-25 11:46:45,638 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:46,586 - INFO - Current best loss 9.30317
+2024-04-25 11:46:52,213 - INFO - 
+ Epoch: 0095 train_loss= 23.14997 train_acc= 0.49625 val_loss= 9.30297 val_acc= 0.74818 test_loss= 7.56067 test_acc= 0.78712 time= 5.62352
+2024-04-25 11:46:52,325 - INFO - Configurations for training:
+2024-04-25 11:46:52,339 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:46:53,741 - INFO - Current best loss 9.30297
+2024-04-25 11:46:59,253 - INFO - 
+ Epoch: 0096 train_loss= 25.18831 train_acc= 0.47640 val_loss= 9.30974 val_acc= 0.75000 test_loss= 7.55647 test_acc= 0.78986 time= 5.50914
+2024-04-25 11:47:05,577 - INFO - 
+ Epoch: 0097 train_loss= 23.53378 train_acc= 0.58578 val_loss= 9.31097 val_acc= 0.75182 test_loss= 7.54991 test_acc= 0.79169 time= 6.32053
+2024-04-25 11:47:11,226 - INFO - 
+ Epoch: 0098 train_loss= 19.18286 train_acc= 0.62163 val_loss= 9.30041 val_acc= 0.75182 test_loss= 7.53116 test_acc= 0.79260 time= 5.64596
+2024-04-25 11:47:11,326 - INFO - Configurations for training:
+2024-04-25 11:47:11,329 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:47:12,918 - INFO - Current best loss 9.30041
+2024-04-25 11:47:18,559 - INFO - 
+ Epoch: 0099 train_loss= 22.32831 train_acc= 0.52036 val_loss= 9.30284 val_acc= 0.75365 test_loss= 7.52284 test_acc= 0.79351 time= 5.63852
+2024-04-25 11:47:24,360 - INFO - 
+ Epoch: 0100 train_loss= 24.28090 train_acc= 0.54932 val_loss= 9.25841 val_acc= 0.75365 test_loss= 7.48361 test_acc= 0.79671 time= 5.79818
+2024-04-25 11:47:24,460 - INFO - Configurations for training:
+2024-04-25 11:47:24,466 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:47:25,565 - INFO - Current best loss 9.25841
+2024-04-25 11:47:31,125 - INFO - 
+ Epoch: 0101 train_loss= 17.99326 train_acc= 0.59247 val_loss= 9.20990 val_acc= 0.75547 test_loss= 7.44289 test_acc= 0.79854 time= 5.55744
+2024-04-25 11:47:31,244 - INFO - Configurations for training:
+2024-04-25 11:47:31,256 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:47:32,740 - INFO - Current best loss 9.20990
+2024-04-25 11:47:38,874 - INFO - 
+ Epoch: 0102 train_loss= 18.38635 train_acc= 0.58457 val_loss= 9.16618 val_acc= 0.75547 test_loss= 7.40165 test_acc= 0.79854 time= 6.13078
+2024-04-25 11:47:38,962 - INFO - Configurations for training:
+2024-04-25 11:47:38,965 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:47:40,084 - INFO - Current best loss 9.16618
+2024-04-25 11:47:45,548 - INFO - 
+ Epoch: 0103 train_loss= 20.33602 train_acc= 0.60664 val_loss= 9.10057 val_acc= 0.75547 test_loss= 7.34367 test_acc= 0.79808 time= 5.46052
+2024-04-25 11:47:45,714 - INFO - Configurations for training:
+2024-04-25 11:47:45,717 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:47:46,946 - INFO - Current best loss 9.10057
+2024-04-25 11:47:52,397 - INFO - 
+ Epoch: 0104 train_loss= 23.47607 train_acc= 0.57869 val_loss= 9.06618 val_acc= 0.75547 test_loss= 7.31194 test_acc= 0.79991 time= 5.44722
+2024-04-25 11:47:52,509 - INFO - Configurations for training:
+2024-04-25 11:47:52,511 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:47:54,024 - INFO - Current best loss 9.06618
+2024-04-25 11:47:59,503 - INFO - 
+ Epoch: 0105 train_loss= 27.62625 train_acc= 0.48450 val_loss= 9.05418 val_acc= 0.75547 test_loss= 7.29273 test_acc= 0.80037 time= 5.47627
+2024-04-25 11:47:59,620 - INFO - Configurations for training:
+2024-04-25 11:47:59,623 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:00,950 - INFO - Current best loss 9.05418
+2024-04-25 11:48:06,513 - INFO - 
+ Epoch: 0106 train_loss= 23.25248 train_acc= 0.58376 val_loss= 9.01287 val_acc= 0.75547 test_loss= 7.25093 test_acc= 0.79991 time= 5.55003
+2024-04-25 11:48:06,614 - INFO - Configurations for training:
+2024-04-25 11:48:06,627 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:08,179 - INFO - Current best loss 9.01287
+2024-04-25 11:48:14,131 - INFO - 
+ Epoch: 0107 train_loss= 21.68079 train_acc= 0.57667 val_loss= 8.93378 val_acc= 0.75547 test_loss= 7.18476 test_acc= 0.79945 time= 5.94836
+2024-04-25 11:48:14,296 - INFO - Configurations for training:
+2024-04-25 11:48:14,299 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:15,196 - INFO - Current best loss 8.93378
+2024-04-25 11:48:20,848 - INFO - 
+ Epoch: 0108 train_loss= 28.44290 train_acc= 0.37351 val_loss= 8.84971 val_acc= 0.75365 test_loss= 7.10879 test_acc= 0.79808 time= 5.64869
+2024-04-25 11:48:20,986 - INFO - Configurations for training:
+2024-04-25 11:48:20,989 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:22,078 - INFO - Current best loss 8.84971
+2024-04-25 11:48:27,473 - INFO - 
+ Epoch: 0109 train_loss= 20.39919 train_acc= 0.55884 val_loss= 8.77985 val_acc= 0.75365 test_loss= 7.03768 test_acc= 0.79762 time= 5.39157
+2024-04-25 11:48:27,590 - INFO - Configurations for training:
+2024-04-25 11:48:27,593 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:28,575 - INFO - Current best loss 8.77985
+2024-04-25 11:48:34,219 - INFO - 
+ Epoch: 0110 train_loss= 23.45389 train_acc= 0.52846 val_loss= 8.67611 val_acc= 0.75182 test_loss= 6.93833 test_acc= 0.79625 time= 5.64050
+2024-04-25 11:48:34,363 - INFO - Configurations for training:
+2024-04-25 11:48:34,365 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:35,221 - INFO - Current best loss 8.67611
+2024-04-25 11:48:41,019 - INFO - 
+ Epoch: 0111 train_loss= 23.16758 train_acc= 0.59935 val_loss= 8.58845 val_acc= 0.75000 test_loss= 6.84202 test_acc= 0.79625 time= 5.79491
+2024-04-25 11:48:41,476 - INFO - Configurations for training:
+2024-04-25 11:48:41,479 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:42,440 - INFO - Current best loss 8.58845
+2024-04-25 11:48:48,025 - INFO - 
+ Epoch: 0112 train_loss= 17.18095 train_acc= 0.61353 val_loss= 8.49796 val_acc= 0.75000 test_loss= 6.75348 test_acc= 0.79397 time= 5.58230
+2024-04-25 11:48:48,122 - INFO - Configurations for training:
+2024-04-25 11:48:48,124 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:48,964 - INFO - Current best loss 8.49796
+2024-04-25 11:48:54,479 - INFO - 
+ Epoch: 0113 train_loss= 21.82412 train_acc= 0.61495 val_loss= 8.40588 val_acc= 0.74818 test_loss= 6.67251 test_acc= 0.79397 time= 5.51194
+2024-04-25 11:48:54,617 - INFO - Configurations for training:
+2024-04-25 11:48:54,620 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:48:55,499 - INFO - Current best loss 8.40588
+2024-04-25 11:49:00,998 - INFO - 
+ Epoch: 0114 train_loss= 20.36661 train_acc= 0.59125 val_loss= 8.29718 val_acc= 0.75000 test_loss= 6.57081 test_acc= 0.79397 time= 5.49639
+2024-04-25 11:49:01,170 - INFO - Configurations for training:
+2024-04-25 11:49:01,174 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:02,266 - INFO - Current best loss 8.29718
+2024-04-25 11:49:07,824 - INFO - 
+ Epoch: 0115 train_loss= 18.92410 train_acc= 0.58821 val_loss= 8.19007 val_acc= 0.75182 test_loss= 6.46514 test_acc= 0.79488 time= 5.55512
+2024-04-25 11:49:07,922 - INFO - Configurations for training:
+2024-04-25 11:49:07,925 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:08,918 - INFO - Current best loss 8.19007
+2024-04-25 11:49:14,936 - INFO - 
+ Epoch: 0116 train_loss= 17.27089 train_acc= 0.61110 val_loss= 8.08687 val_acc= 0.75182 test_loss= 6.37065 test_acc= 0.79580 time= 6.01371
+2024-04-25 11:49:15,020 - INFO - Configurations for training:
+2024-04-25 11:49:15,023 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:16,089 - INFO - Current best loss 8.08687
+2024-04-25 11:49:21,759 - INFO - 
+ Epoch: 0117 train_loss= 22.57471 train_acc= 0.55175 val_loss= 7.99232 val_acc= 0.74818 test_loss= 6.27461 test_acc= 0.79534 time= 5.66721
+2024-04-25 11:49:21,877 - INFO - Configurations for training:
+2024-04-25 11:49:21,880 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:22,934 - INFO - Current best loss 7.99232
+2024-04-25 11:49:28,544 - INFO - 
+ Epoch: 0118 train_loss= 21.51543 train_acc= 0.60057 val_loss= 7.89482 val_acc= 0.74635 test_loss= 6.17027 test_acc= 0.79534 time= 5.60735
+2024-04-25 11:49:28,677 - INFO - Configurations for training:
+2024-04-25 11:49:28,680 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:29,606 - INFO - Current best loss 7.89482
+2024-04-25 11:49:35,171 - INFO - 
+ Epoch: 0119 train_loss= 15.44486 train_acc= 0.62852 val_loss= 7.79240 val_acc= 0.74635 test_loss= 6.07162 test_acc= 0.79306 time= 5.56167
+2024-04-25 11:49:35,304 - INFO - Configurations for training:
+2024-04-25 11:49:35,307 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:36,200 - INFO - Current best loss 7.79240
+2024-04-25 11:49:41,721 - INFO - 
+ Epoch: 0120 train_loss= 20.88448 train_acc= 0.60624 val_loss= 7.67499 val_acc= 0.74635 test_loss= 5.96543 test_acc= 0.79443 time= 5.51799
+2024-04-25 11:49:41,815 - INFO - Configurations for training:
+2024-04-25 11:49:41,818 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:42,652 - INFO - Current best loss 7.67499
+2024-04-25 11:49:48,927 - INFO - 
+ Epoch: 0121 train_loss= 25.59367 train_acc= 0.56634 val_loss= 7.56596 val_acc= 0.75000 test_loss= 5.87511 test_acc= 0.79625 time= 6.27139
+2024-04-25 11:49:49,033 - INFO - Configurations for training:
+2024-04-25 11:49:49,036 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:50,056 - INFO - Current best loss 7.56596
+2024-04-25 11:49:55,676 - INFO - 
+ Epoch: 0122 train_loss= 17.82929 train_acc= 0.63379 val_loss= 7.45948 val_acc= 0.75365 test_loss= 5.79066 test_acc= 0.79717 time= 5.61166
+2024-04-25 11:49:56,121 - INFO - Configurations for training:
+2024-04-25 11:49:56,124 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:49:57,319 - INFO - Current best loss 7.45948
+2024-04-25 11:50:02,875 - INFO - 
+ Epoch: 0123 train_loss= 17.71895 train_acc= 0.61920 val_loss= 7.37338 val_acc= 0.75730 test_loss= 5.71611 test_acc= 0.79808 time= 5.55329
+2024-04-25 11:50:03,028 - INFO - Configurations for training:
+2024-04-25 11:50:03,030 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:03,980 - INFO - Current best loss 7.37338
+2024-04-25 11:50:09,612 - INFO - 
+ Epoch: 0124 train_loss= 19.21817 train_acc= 0.60340 val_loss= 7.29704 val_acc= 0.75912 test_loss= 5.65119 test_acc= 0.79854 time= 5.62875
+2024-04-25 11:50:09,683 - INFO - Configurations for training:
+2024-04-25 11:50:09,686 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:10,652 - INFO - Current best loss 7.29704
+2024-04-25 11:50:16,318 - INFO - 
+ Epoch: 0125 train_loss= 17.93105 train_acc= 0.65991 val_loss= 7.23183 val_acc= 0.75912 test_loss= 5.58996 test_acc= 0.80037 time= 5.66396
+2024-04-25 11:50:16,425 - INFO - Configurations for training:
+2024-04-25 11:50:16,428 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:17,408 - INFO - Current best loss 7.23183
+2024-04-25 11:50:23,774 - INFO - 
+ Epoch: 0126 train_loss= 20.62176 train_acc= 0.58862 val_loss= 7.14413 val_acc= 0.76277 test_loss= 5.51082 test_acc= 0.79991 time= 6.36320
+2024-04-25 11:50:23,933 - INFO - Configurations for training:
+2024-04-25 11:50:23,936 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:24,964 - INFO - Current best loss 7.14413
+2024-04-25 11:50:30,547 - INFO - 
+ Epoch: 0127 train_loss= 23.03235 train_acc= 0.54385 val_loss= 7.07257 val_acc= 0.76095 test_loss= 5.43324 test_acc= 0.79899 time= 5.58070
+2024-04-25 11:50:30,678 - INFO - Configurations for training:
+2024-04-25 11:50:30,691 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:31,635 - INFO - Current best loss 7.07257
+2024-04-25 11:50:37,231 - INFO - 
+ Epoch: 0128 train_loss= 14.42764 train_acc= 0.67693 val_loss= 7.01146 val_acc= 0.75912 test_loss= 5.36925 test_acc= 0.79671 time= 5.59315
+2024-04-25 11:50:37,343 - INFO - Configurations for training:
+2024-04-25 11:50:37,354 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:38,936 - INFO - Current best loss 7.01146
+2024-04-25 11:50:44,376 - INFO - 
+ Epoch: 0129 train_loss= 21.28644 train_acc= 0.68888 val_loss= 6.91411 val_acc= 0.75547 test_loss= 5.28112 test_acc= 0.79534 time= 5.43745
+2024-04-25 11:50:44,502 - INFO - Configurations for training:
+2024-04-25 11:50:44,514 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:45,606 - INFO - Current best loss 6.91411
+2024-04-25 11:50:51,240 - INFO - 
+ Epoch: 0130 train_loss= 15.27896 train_acc= 0.64979 val_loss= 6.83555 val_acc= 0.75365 test_loss= 5.20571 test_acc= 0.79351 time= 5.63212
+2024-04-25 11:50:51,360 - INFO - Configurations for training:
+2024-04-25 11:50:51,363 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:52,878 - INFO - Current best loss 6.83555
+2024-04-25 11:50:58,366 - INFO - 
+ Epoch: 0131 train_loss= 17.88640 train_acc= 0.57262 val_loss= 6.79118 val_acc= 0.75000 test_loss= 5.15148 test_acc= 0.79260 time= 5.48441
+2024-04-25 11:50:58,470 - INFO - Configurations for training:
+2024-04-25 11:50:58,479 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:50:59,520 - INFO - Current best loss 6.79118
+2024-04-25 11:51:04,904 - INFO - 
+ Epoch: 0132 train_loss= 17.94040 train_acc= 0.62690 val_loss= 6.75987 val_acc= 0.74818 test_loss= 5.10637 test_acc= 0.79397 time= 5.38162
+2024-04-25 11:51:05,041 - INFO - Configurations for training:
+2024-04-25 11:51:05,043 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:51:06,064 - INFO - Current best loss 6.75987
+2024-04-25 11:51:11,520 - INFO - 
+ Epoch: 0133 train_loss= 17.90087 train_acc= 0.67065 val_loss= 6.74212 val_acc= 0.74635 test_loss= 5.07589 test_acc= 0.79306 time= 5.45095
+2024-04-25 11:51:11,659 - INFO - Configurations for training:
+2024-04-25 11:51:11,662 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:51:12,759 - INFO - Current best loss 6.74212
+2024-04-25 11:51:18,255 - INFO - 
+ Epoch: 0134 train_loss= 17.74434 train_acc= 0.64695 val_loss= 6.75152 val_acc= 0.74635 test_loss= 5.05566 test_acc= 0.79032 time= 5.49168
+2024-04-25 11:51:24,152 - INFO - 
+ Epoch: 0135 train_loss= 19.84836 train_acc= 0.65323 val_loss= 6.68157 val_acc= 0.74635 test_loss= 4.99680 test_acc= 0.79214 time= 5.88855
+2024-04-25 11:51:24,276 - INFO - Configurations for training:
+2024-04-25 11:51:24,279 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:51:25,941 - INFO - Current best loss 6.68157
+2024-04-25 11:51:31,805 - INFO - 
+ Epoch: 0136 train_loss= 18.77637 train_acc= 0.57869 val_loss= 6.62281 val_acc= 0.74635 test_loss= 4.94564 test_acc= 0.79214 time= 5.86109
+2024-04-25 11:51:31,920 - INFO - Configurations for training:
+2024-04-25 11:51:31,923 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:51:33,143 - INFO - Current best loss 6.62281
+2024-04-25 11:51:38,635 - INFO - 
+ Epoch: 0137 train_loss= 24.07323 train_acc= 0.65526 val_loss= 6.61786 val_acc= 0.74635 test_loss= 4.91545 test_acc= 0.78986 time= 5.48910
+2024-04-25 11:51:38,751 - INFO - Configurations for training:
+2024-04-25 11:51:38,753 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:51:40,156 - INFO - Current best loss 6.61786
+2024-04-25 11:51:45,725 - INFO - 
+ Epoch: 0138 train_loss= 21.11587 train_acc= 0.65688 val_loss= 6.64007 val_acc= 0.74635 test_loss= 4.89364 test_acc= 0.78483 time= 5.56658
+2024-04-25 11:51:51,175 - INFO - 
+ Epoch: 0139 train_loss= 22.32897 train_acc= 0.62325 val_loss= 6.61049 val_acc= 0.75000 test_loss= 4.85015 test_acc= 0.78392 time= 5.44540
+2024-04-25 11:51:51,263 - INFO - Configurations for training:
+2024-04-25 11:51:51,265 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:51:52,653 - INFO - Current best loss 6.61049
+2024-04-25 11:51:58,631 - INFO - 
+ Epoch: 0140 train_loss= 17.53694 train_acc= 0.58112 val_loss= 6.61353 val_acc= 0.74635 test_loss= 4.82425 test_acc= 0.78438 time= 5.97409
+2024-04-25 11:52:04,212 - INFO - 
+ Epoch: 0141 train_loss= 16.56924 train_acc= 0.66397 val_loss= 6.59098 val_acc= 0.74635 test_loss= 4.78757 test_acc= 0.78438 time= 5.57480
+2024-04-25 11:52:04,319 - INFO - Configurations for training:
+2024-04-25 11:52:04,322 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:52:05,386 - INFO - Current best loss 6.59098
+2024-04-25 11:52:10,965 - INFO - 
+ Epoch: 0142 train_loss= 18.87696 train_acc= 0.45270 val_loss= 6.60325 val_acc= 0.74635 test_loss= 4.77479 test_acc= 0.78483 time= 5.57570
+2024-04-25 11:52:16,516 - INFO - 
+ Epoch: 0143 train_loss= 16.99632 train_acc= 0.62953 val_loss= 6.55680 val_acc= 0.74453 test_loss= 4.72948 test_acc= 0.78712 time= 5.54638
+2024-04-25 11:52:16,616 - INFO - Configurations for training:
+2024-04-25 11:52:16,619 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:52:17,609 - INFO - Current best loss 6.55680
+2024-04-25 11:52:23,325 - INFO - 
+ Epoch: 0144 train_loss= 18.91479 train_acc= 0.62021 val_loss= 6.48798 val_acc= 0.75365 test_loss= 4.68179 test_acc= 0.79077 time= 5.71277
+2024-04-25 11:52:23,438 - INFO - Configurations for training:
+2024-04-25 11:52:23,441 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:52:24,679 - INFO - Current best loss 6.48798
+2024-04-25 11:52:30,689 - INFO - 
+ Epoch: 0145 train_loss= 12.10172 train_acc= 0.66376 val_loss= 6.44877 val_acc= 0.75365 test_loss= 4.65306 test_acc= 0.79488 time= 6.00763
+2024-04-25 11:52:30,811 - INFO - Configurations for training:
+2024-04-25 11:52:30,813 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:52:31,957 - INFO - Current best loss 6.44877
+2024-04-25 11:52:37,530 - INFO - 
+ Epoch: 0146 train_loss= 17.16656 train_acc= 0.62427 val_loss= 6.44806 val_acc= 0.75365 test_loss= 4.65601 test_acc= 0.79580 time= 5.57063
+2024-04-25 11:52:37,659 - INFO - Configurations for training:
+2024-04-25 11:52:37,662 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:52:38,752 - INFO - Current best loss 6.44806
+2024-04-25 11:52:44,251 - INFO - 
+ Epoch: 0147 train_loss= 17.91416 train_acc= 0.64290 val_loss= 6.48599 val_acc= 0.75365 test_loss= 4.69078 test_acc= 0.79762 time= 5.49562
+2024-04-25 11:52:49,751 - INFO - 
+ Epoch: 0148 train_loss= 18.06762 train_acc= 0.61596 val_loss= 6.49382 val_acc= 0.75365 test_loss= 4.70940 test_acc= 0.80219 time= 5.49765
+2024-04-25 11:52:55,132 - INFO - 
+ Epoch: 0149 train_loss= 19.18537 train_acc= 0.59915 val_loss= 6.44309 val_acc= 0.75730 test_loss= 4.70517 test_acc= 0.80356 time= 5.37727
+2024-04-25 11:52:55,226 - INFO - Configurations for training:
+2024-04-25 11:52:55,229 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:52:56,288 - INFO - Current best loss 6.44309
+2024-04-25 11:53:02,047 - INFO - 
+ Epoch: 0150 train_loss= 18.94835 train_acc= 0.65890 val_loss= 6.39587 val_acc= 0.76277 test_loss= 4.70134 test_acc= 0.80585 time= 5.75550
+2024-04-25 11:53:02,141 - INFO - Configurations for training:
+2024-04-25 11:53:02,143 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:03,973 - INFO - Current best loss 6.39587
+2024-04-25 11:53:09,654 - INFO - 
+ Epoch: 0151 train_loss= 13.33446 train_acc= 0.70995 val_loss= 6.33408 val_acc= 0.76460 test_loss= 4.68837 test_acc= 0.80950 time= 5.67733
+2024-04-25 11:53:09,813 - INFO - Configurations for training:
+2024-04-25 11:53:09,815 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:10,745 - INFO - Current best loss 6.33408
+2024-04-25 11:53:16,199 - INFO - 
+ Epoch: 0152 train_loss= 17.01081 train_acc= 0.65242 val_loss= 6.27182 val_acc= 0.76642 test_loss= 4.66874 test_acc= 0.81270 time= 5.45114
+2024-04-25 11:53:16,277 - INFO - Configurations for training:
+2024-04-25 11:53:16,279 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:17,386 - INFO - Current best loss 6.27182
+2024-04-25 11:53:23,030 - INFO - 
+ Epoch: 0153 train_loss= 21.89820 train_acc= 0.55054 val_loss= 6.20630 val_acc= 0.76825 test_loss= 4.64688 test_acc= 0.81864 time= 5.64102
+2024-04-25 11:53:23,173 - INFO - Configurations for training:
+2024-04-25 11:53:23,176 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:24,009 - INFO - Current best loss 6.20630
+2024-04-25 11:53:29,667 - INFO - 
+ Epoch: 0154 train_loss= 17.11435 train_acc= 0.63723 val_loss= 6.18575 val_acc= 0.76825 test_loss= 4.64938 test_acc= 0.81910 time= 5.65515
+2024-04-25 11:53:29,762 - INFO - Configurations for training:
+2024-04-25 11:53:29,774 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:30,807 - INFO - Current best loss 6.18575
+2024-04-25 11:53:37,051 - INFO - 
+ Epoch: 0155 train_loss= 17.06767 train_acc= 0.66356 val_loss= 6.16276 val_acc= 0.77190 test_loss= 4.64805 test_acc= 0.82047 time= 6.24114
+2024-04-25 11:53:37,177 - INFO - Configurations for training:
+2024-04-25 11:53:37,180 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:38,357 - INFO - Current best loss 6.16276
+2024-04-25 11:53:44,000 - INFO - 
+ Epoch: 0156 train_loss= 14.45312 train_acc= 0.68685 val_loss= 6.13550 val_acc= 0.77190 test_loss= 4.64522 test_acc= 0.82184 time= 5.64068
+2024-04-25 11:53:44,131 - INFO - Configurations for training:
+2024-04-25 11:53:44,134 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:44,877 - INFO - Current best loss 6.13550
+2024-04-25 11:53:50,520 - INFO - 
+ Epoch: 0157 train_loss= 16.70868 train_acc= 0.67389 val_loss= 6.10325 val_acc= 0.77190 test_loss= 4.63766 test_acc= 0.82366 time= 5.63992
+2024-04-25 11:53:50,656 - INFO - Configurations for training:
+2024-04-25 11:53:50,659 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:51,619 - INFO - Current best loss 6.10325
+2024-04-25 11:53:57,206 - INFO - 
+ Epoch: 0158 train_loss= 13.60441 train_acc= 0.70974 val_loss= 6.04597 val_acc= 0.77372 test_loss= 4.61514 test_acc= 0.82549 time= 5.58281
+2024-04-25 11:53:57,352 - INFO - Configurations for training:
+2024-04-25 11:53:57,355 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:53:58,547 - INFO - Current best loss 6.04597
+2024-04-25 11:54:04,234 - INFO - 
+ Epoch: 0159 train_loss= 14.14315 train_acc= 0.66660 val_loss= 6.00860 val_acc= 0.77737 test_loss= 4.60608 test_acc= 0.82686 time= 5.68464
+2024-04-25 11:54:04,401 - INFO - Configurations for training:
+2024-04-25 11:54:04,404 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:05,211 - INFO - Current best loss 6.00860
+2024-04-25 11:54:11,464 - INFO - 
+ Epoch: 0160 train_loss= 15.68859 train_acc= 0.63095 val_loss= 5.96324 val_acc= 0.78102 test_loss= 4.58843 test_acc= 0.82823 time= 6.24923
+2024-04-25 11:54:11,607 - INFO - Configurations for training:
+2024-04-25 11:54:11,609 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:12,764 - INFO - Current best loss 5.96324
+2024-04-25 11:54:18,409 - INFO - 
+ Epoch: 0161 train_loss= 15.00539 train_acc= 0.67652 val_loss= 5.91917 val_acc= 0.78832 test_loss= 4.57324 test_acc= 0.82960 time= 5.64248
+2024-04-25 11:54:18,487 - INFO - Configurations for training:
+2024-04-25 11:54:18,491 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:19,640 - INFO - Current best loss 5.91917
+2024-04-25 11:54:25,477 - INFO - 
+ Epoch: 0162 train_loss= 16.36877 train_acc= 0.62508 val_loss= 5.86622 val_acc= 0.79015 test_loss= 4.55157 test_acc= 0.83052 time= 5.83419
+2024-04-25 11:54:25,606 - INFO - Configurations for training:
+2024-04-25 11:54:25,609 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:26,513 - INFO - Current best loss 5.86622
+2024-04-25 11:54:32,122 - INFO - 
+ Epoch: 0163 train_loss= 18.34340 train_acc= 0.65141 val_loss= 5.78163 val_acc= 0.79197 test_loss= 4.51055 test_acc= 0.83097 time= 5.60638
+2024-04-25 11:54:32,265 - INFO - Configurations for training:
+2024-04-25 11:54:32,267 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:33,373 - INFO - Current best loss 5.78163
+2024-04-25 11:54:38,932 - INFO - 
+ Epoch: 0164 train_loss= 17.42987 train_acc= 0.64310 val_loss= 5.72187 val_acc= 0.79745 test_loss= 4.49041 test_acc= 0.83280 time= 5.55613
+2024-04-25 11:54:39,068 - INFO - Configurations for training:
+2024-04-25 11:54:39,071 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:40,179 - INFO - Current best loss 5.72187
+2024-04-25 11:54:46,141 - INFO - 
+ Epoch: 0165 train_loss= 15.64635 train_acc= 0.68908 val_loss= 5.65445 val_acc= 0.80109 test_loss= 4.46265 test_acc= 0.83554 time= 5.95820
+2024-04-25 11:54:46,235 - INFO - Configurations for training:
+2024-04-25 11:54:46,238 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:47,607 - INFO - Current best loss 5.65445
+2024-04-25 11:54:53,308 - INFO - 
+ Epoch: 0166 train_loss= 13.62641 train_acc= 0.70002 val_loss= 5.59126 val_acc= 0.80292 test_loss= 4.43313 test_acc= 0.83691 time= 5.69718
+2024-04-25 11:54:53,454 - INFO - Configurations for training:
+2024-04-25 11:54:53,456 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:54:54,766 - INFO - Current best loss 5.59126
+2024-04-25 11:55:00,296 - INFO - 
+ Epoch: 0167 train_loss= 16.07746 train_acc= 0.70873 val_loss= 5.49691 val_acc= 0.80292 test_loss= 4.36521 test_acc= 0.83783 time= 5.52701
+2024-04-25 11:55:00,395 - INFO - Configurations for training:
+2024-04-25 11:55:00,407 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:01,628 - INFO - Current best loss 5.49691
+2024-04-25 11:55:07,282 - INFO - 
+ Epoch: 0168 train_loss= 15.64509 train_acc= 0.63905 val_loss= 5.40838 val_acc= 0.80474 test_loss= 4.31328 test_acc= 0.84011 time= 5.65136
+2024-04-25 11:55:07,429 - INFO - Configurations for training:
+2024-04-25 11:55:07,434 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:08,458 - INFO - Current best loss 5.40838
+2024-04-25 11:55:14,703 - INFO - 
+ Epoch: 0169 train_loss= 16.18023 train_acc= 0.62528 val_loss= 5.32962 val_acc= 0.80474 test_loss= 4.26619 test_acc= 0.84148 time= 6.24211
+2024-04-25 11:55:14,840 - INFO - Configurations for training:
+2024-04-25 11:55:14,843 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:15,739 - INFO - Current best loss 5.32962
+2024-04-25 11:55:21,484 - INFO - 
+ Epoch: 0170 train_loss= 15.22656 train_acc= 0.64391 val_loss= 5.26671 val_acc= 0.80657 test_loss= 4.22135 test_acc= 0.84194 time= 5.74037
+2024-04-25 11:55:21,592 - INFO - Configurations for training:
+2024-04-25 11:55:21,594 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:22,737 - INFO - Current best loss 5.26671
+2024-04-25 11:55:28,288 - INFO - 
+ Epoch: 0171 train_loss= 15.31826 train_acc= 0.68766 val_loss= 5.21372 val_acc= 0.80839 test_loss= 4.17815 test_acc= 0.84376 time= 5.54640
+2024-04-25 11:55:28,431 - INFO - Configurations for training:
+2024-04-25 11:55:28,433 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:29,584 - INFO - Current best loss 5.21372
+2024-04-25 11:55:35,185 - INFO - 
+ Epoch: 0172 train_loss= 16.51575 train_acc= 0.69617 val_loss= 5.14581 val_acc= 0.80839 test_loss= 4.12740 test_acc= 0.84559 time= 5.59161
+2024-04-25 11:55:35,351 - INFO - Configurations for training:
+2024-04-25 11:55:35,354 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:36,271 - INFO - Current best loss 5.14581
+2024-04-25 11:55:41,951 - INFO - 
+ Epoch: 0173 train_loss= 13.19191 train_acc= 0.69070 val_loss= 5.09921 val_acc= 0.80839 test_loss= 4.09786 test_acc= 0.84605 time= 5.67701
+2024-04-25 11:55:42,119 - INFO - Configurations for training:
+2024-04-25 11:55:42,121 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:43,087 - INFO - Current best loss 5.09921
+2024-04-25 11:55:49,165 - INFO - 
+ Epoch: 0174 train_loss= 15.42032 train_acc= 0.65890 val_loss= 5.04859 val_acc= 0.81204 test_loss= 4.06156 test_acc= 0.84788 time= 6.07576
+2024-04-25 11:55:49,280 - INFO - Configurations for training:
+2024-04-25 11:55:49,283 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:50,173 - INFO - Current best loss 5.04859
+2024-04-25 11:55:55,798 - INFO - 
+ Epoch: 0175 train_loss= 10.72132 train_acc= 0.71825 val_loss= 5.01127 val_acc= 0.81204 test_loss= 4.03764 test_acc= 0.84925 time= 5.62138
+2024-04-25 11:55:55,897 - INFO - Configurations for training:
+2024-04-25 11:55:55,909 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:55:56,718 - INFO - Current best loss 5.01127
+2024-04-25 11:56:02,251 - INFO - 
+ Epoch: 0176 train_loss= 13.39689 train_acc= 0.66984 val_loss= 4.98577 val_acc= 0.81752 test_loss= 4.02112 test_acc= 0.84970 time= 5.53000
+2024-04-25 11:56:02,397 - INFO - Configurations for training:
+2024-04-25 11:56:02,400 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:03,675 - INFO - Current best loss 4.98577
+2024-04-25 11:56:09,349 - INFO - 
+ Epoch: 0177 train_loss= 15.86726 train_acc= 0.67004 val_loss= 4.96282 val_acc= 0.81752 test_loss= 4.00590 test_acc= 0.84970 time= 5.67131
+2024-04-25 11:56:09,476 - INFO - Configurations for training:
+2024-04-25 11:56:09,479 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:10,291 - INFO - Current best loss 4.96282
+2024-04-25 11:56:15,922 - INFO - 
+ Epoch: 0178 train_loss= 12.93754 train_acc= 0.68544 val_loss= 4.92938 val_acc= 0.81752 test_loss= 3.97956 test_acc= 0.85016 time= 5.62622
+2024-04-25 11:56:16,011 - INFO - Configurations for training:
+2024-04-25 11:56:16,023 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:16,880 - INFO - Current best loss 4.92938
+2024-04-25 11:56:23,375 - INFO - 
+ Epoch: 0179 train_loss= 15.69295 train_acc= 0.66599 val_loss= 4.90638 val_acc= 0.81387 test_loss= 3.96531 test_acc= 0.85016 time= 6.48288
+2024-04-25 11:56:23,574 - INFO - Configurations for training:
+2024-04-25 11:56:23,577 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:24,517 - INFO - Current best loss 4.90638
+2024-04-25 11:56:30,141 - INFO - 
+ Epoch: 0180 train_loss= 12.50834 train_acc= 0.69577 val_loss= 4.87258 val_acc= 0.81387 test_loss= 3.93737 test_acc= 0.84879 time= 5.62091
+2024-04-25 11:56:30,266 - INFO - Configurations for training:
+2024-04-25 11:56:30,269 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:31,065 - INFO - Current best loss 4.87258
+2024-04-25 11:56:36,861 - INFO - 
+ Epoch: 0181 train_loss= 13.98629 train_acc= 0.69111 val_loss= 4.85562 val_acc= 0.81204 test_loss= 3.91891 test_acc= 0.84833 time= 5.79260
+2024-04-25 11:56:36,949 - INFO - Configurations for training:
+2024-04-25 11:56:36,962 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:37,738 - INFO - Current best loss 4.85562
+2024-04-25 11:56:43,267 - INFO - 
+ Epoch: 0182 train_loss= 18.13722 train_acc= 0.64290 val_loss= 4.82594 val_acc= 0.81204 test_loss= 3.90174 test_acc= 0.84833 time= 5.52644
+2024-04-25 11:56:43,403 - INFO - Configurations for training:
+2024-04-25 11:56:43,406 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:44,258 - INFO - Current best loss 4.82594
+2024-04-25 11:56:49,744 - INFO - 
+ Epoch: 0183 train_loss= 13.15281 train_acc= 0.70751 val_loss= 4.79621 val_acc= 0.81387 test_loss= 3.87862 test_acc= 0.84833 time= 5.48312
+2024-04-25 11:56:49,930 - INFO - Configurations for training:
+2024-04-25 11:56:49,933 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:51,439 - INFO - Current best loss 4.79621
+2024-04-25 11:56:57,192 - INFO - 
+ Epoch: 0184 train_loss= 14.30859 train_acc= 0.69597 val_loss= 4.77821 val_acc= 0.81387 test_loss= 3.86498 test_acc= 0.84651 time= 5.74919
+2024-04-25 11:56:57,351 - INFO - Configurations for training:
+2024-04-25 11:56:57,353 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:56:58,117 - INFO - Current best loss 4.77821
+2024-04-25 11:57:03,617 - INFO - 
+ Epoch: 0185 train_loss= 16.72992 train_acc= 0.61778 val_loss= 4.75637 val_acc= 0.81569 test_loss= 3.84740 test_acc= 0.84696 time= 5.49760
+2024-04-25 11:57:03,726 - INFO - Configurations for training:
+2024-04-25 11:57:03,729 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:57:04,891 - INFO - Current best loss 4.75637
+2024-04-25 11:57:10,304 - INFO - 
+ Epoch: 0186 train_loss= 17.06311 train_acc= 0.56046 val_loss= 4.75479 val_acc= 0.81204 test_loss= 3.83347 test_acc= 0.84651 time= 5.41044
+2024-04-25 11:57:10,404 - INFO - Configurations for training:
+2024-04-25 11:57:10,407 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:57:11,506 - INFO - Current best loss 4.75479
+2024-04-25 11:57:17,069 - INFO - 
+ Epoch: 0187 train_loss= 13.46836 train_acc= 0.72068 val_loss= 4.74886 val_acc= 0.81204 test_loss= 3.81559 test_acc= 0.84605 time= 5.55982
+2024-04-25 11:57:17,214 - INFO - Configurations for training:
+2024-04-25 11:57:17,223 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:57:18,243 - INFO - Current best loss 4.74886
+2024-04-25 11:57:24,279 - INFO - 
+ Epoch: 0188 train_loss= 19.46157 train_acc= 0.59449 val_loss= 4.76038 val_acc= 0.81204 test_loss= 3.81381 test_acc= 0.84559 time= 6.03237
+2024-04-25 11:57:30,080 - INFO - 
+ Epoch: 0189 train_loss= 13.88645 train_acc= 0.71440 val_loss= 4.77785 val_acc= 0.81204 test_loss= 3.81948 test_acc= 0.84422 time= 5.79376
+2024-04-25 11:57:35,575 - INFO - 
+ Epoch: 0190 train_loss= 12.71773 train_acc= 0.70691 val_loss= 4.81135 val_acc= 0.81022 test_loss= 3.83234 test_acc= 0.84422 time= 5.49243
+2024-04-25 11:57:41,037 - INFO - 
+ Epoch: 0191 train_loss= 13.54865 train_acc= 0.66498 val_loss= 4.84538 val_acc= 0.81022 test_loss= 3.85591 test_acc= 0.84376 time= 5.45835
+2024-04-25 11:57:46,587 - INFO - 
+ Epoch: 0192 train_loss= 13.04742 train_acc= 0.69516 val_loss= 4.88590 val_acc= 0.80839 test_loss= 3.88673 test_acc= 0.84285 time= 5.54559
+2024-04-25 11:57:52,058 - INFO - 
+ Epoch: 0193 train_loss= 16.66231 train_acc= 0.60583 val_loss= 4.92691 val_acc= 0.80474 test_loss= 3.91682 test_acc= 0.84148 time= 5.46750
+2024-04-25 11:57:57,962 - INFO - 
+ Epoch: 0194 train_loss= 11.63575 train_acc= 0.73243 val_loss= 4.94826 val_acc= 0.80292 test_loss= 3.93301 test_acc= 0.84102 time= 5.89997
+2024-04-25 11:58:03,564 - INFO - 
+ Epoch: 0195 train_loss= 13.52493 train_acc= 0.64493 val_loss= 4.99711 val_acc= 0.80109 test_loss= 3.97329 test_acc= 0.84102 time= 5.59978
+2024-04-25 11:58:09,116 - INFO - 
+ Epoch: 0196 train_loss= 10.83416 train_acc= 0.75694 val_loss= 5.03060 val_acc= 0.79927 test_loss= 4.01016 test_acc= 0.84057 time= 5.54819
+2024-04-25 11:58:14,656 - INFO - 
+ Epoch: 0197 train_loss= 14.45467 train_acc= 0.72109 val_loss= 5.04819 val_acc= 0.80109 test_loss= 4.04103 test_acc= 0.83965 time= 5.53698
+2024-04-25 11:58:20,158 - INFO - 
+ Epoch: 0198 train_loss= 13.12345 train_acc= 0.69253 val_loss= 5.06849 val_acc= 0.79927 test_loss= 4.07399 test_acc= 0.83874 time= 5.49751
+2024-04-25 11:58:25,681 - INFO - 
+ Epoch: 0199 train_loss= 14.35641 train_acc= 0.67713 val_loss= 5.08330 val_acc= 0.79927 test_loss= 4.09439 test_acc= 0.83920 time= 5.51926
+2024-04-25 11:58:31,773 - INFO - 
+ Epoch: 0200 train_loss= 13.28974 train_acc= 0.69455 val_loss= 5.07534 val_acc= 0.80109 test_loss= 4.09857 test_acc= 0.83920 time= 6.08919
+2024-04-25 11:58:37,306 - INFO - 
+ Epoch: 0201 train_loss= 12.43623 train_acc= 0.68847 val_loss= 5.07297 val_acc= 0.80292 test_loss= 4.10845 test_acc= 0.83920 time= 5.52973
+2024-04-25 11:58:42,821 - INFO - 
+ Epoch: 0202 train_loss= 13.53985 train_acc= 0.65100 val_loss= 5.07864 val_acc= 0.80657 test_loss= 4.12772 test_acc= 0.83965 time= 5.51253
+2024-04-25 11:58:48,304 - INFO - 
+ Epoch: 0203 train_loss= 14.19484 train_acc= 0.68159 val_loss= 5.10668 val_acc= 0.80657 test_loss= 4.15938 test_acc= 0.84057 time= 5.45932
+2024-04-25 11:58:53,823 - INFO - 
+ Epoch: 0204 train_loss= 12.82305 train_acc= 0.70954 val_loss= 5.15055 val_acc= 0.80474 test_loss= 4.19952 test_acc= 0.84011 time= 5.51449
+2024-04-25 11:58:59,316 - INFO - 
+ Epoch: 0205 train_loss= 11.64260 train_acc= 0.73405 val_loss= 5.19727 val_acc= 0.80292 test_loss= 4.23308 test_acc= 0.83965 time= 5.49010
+2024-04-25 11:59:05,479 - INFO - 
+ Epoch: 0206 train_loss= 16.78088 train_acc= 0.71339 val_loss= 5.22322 val_acc= 0.80292 test_loss= 4.24997 test_acc= 0.84011 time= 6.15934
+2024-04-25 11:59:11,127 - INFO - 
+ Epoch: 0207 train_loss= 14.80122 train_acc= 0.70691 val_loss= 5.21383 val_acc= 0.80292 test_loss= 4.24431 test_acc= 0.83965 time= 5.64540
+2024-04-25 11:59:16,765 - INFO - 
+ Epoch: 0208 train_loss= 12.17954 train_acc= 0.76261 val_loss= 5.17849 val_acc= 0.81022 test_loss= 4.22058 test_acc= 0.84102 time= 5.63531
+2024-04-25 11:59:22,594 - INFO - 
+ Epoch: 0209 train_loss= 11.75311 train_acc= 0.70630 val_loss= 5.11557 val_acc= 0.81022 test_loss= 4.18068 test_acc= 0.84148 time= 5.82512
+2024-04-25 11:59:28,008 - INFO - 
+ Epoch: 0210 train_loss= 17.07922 train_acc= 0.71460 val_loss= 5.04932 val_acc= 0.81204 test_loss= 4.13492 test_acc= 0.84331 time= 5.40956
+2024-04-25 11:59:33,605 - INFO - 
+ Epoch: 0211 train_loss= 10.48548 train_acc= 0.75127 val_loss= 4.98050 val_acc= 0.81204 test_loss= 4.08925 test_acc= 0.84422 time= 5.59398
+2024-04-25 11:59:39,797 - INFO - 
+ Epoch: 0212 train_loss= 10.57500 train_acc= 0.73344 val_loss= 4.92346 val_acc= 0.81204 test_loss= 4.04886 test_acc= 0.84468 time= 6.18872
+2024-04-25 11:59:45,437 - INFO - 
+ Epoch: 0213 train_loss= 14.92775 train_acc= 0.70265 val_loss= 4.83382 val_acc= 0.81022 test_loss= 3.99152 test_acc= 0.84742 time= 5.63686
+2024-04-25 11:59:51,010 - INFO - 
+ Epoch: 0214 train_loss= 15.95544 train_acc= 0.67511 val_loss= 4.74930 val_acc= 0.82117 test_loss= 3.92986 test_acc= 0.85016 time= 5.54707
+2024-04-25 11:59:56,406 - INFO - 
+ Epoch: 0215 train_loss= 14.18936 train_acc= 0.68928 val_loss= 4.69809 val_acc= 0.82299 test_loss= 3.88358 test_acc= 0.85199 time= 5.39310
+2024-04-25 11:59:56,596 - INFO - Configurations for training:
+2024-04-25 11:59:56,598 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 11:59:57,654 - INFO - Current best loss 4.69809
+2024-04-25 12:00:03,365 - INFO - 
+ Epoch: 0216 train_loss= 12.25147 train_acc= 0.69273 val_loss= 4.65298 val_acc= 0.82664 test_loss= 3.83914 test_acc= 0.85290 time= 5.70773
+2024-04-25 12:00:03,485 - INFO - Configurations for training:
+2024-04-25 12:00:03,492 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:05,017 - INFO - Current best loss 4.65298
+2024-04-25 12:00:11,333 - INFO - 
+ Epoch: 0217 train_loss= 12.25323 train_acc= 0.74215 val_loss= 4.60481 val_acc= 0.82847 test_loss= 3.79086 test_acc= 0.85381 time= 6.31372
+2024-04-25 12:00:11,461 - INFO - Configurations for training:
+2024-04-25 12:00:11,464 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:12,579 - INFO - Current best loss 4.60481
+2024-04-25 12:00:18,280 - INFO - 
+ Epoch: 0218 train_loss= 10.88594 train_acc= 0.74053 val_loss= 4.56034 val_acc= 0.83029 test_loss= 3.74359 test_acc= 0.85701 time= 5.69866
+2024-04-25 12:00:18,413 - INFO - Configurations for training:
+2024-04-25 12:00:18,415 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:19,436 - INFO - Current best loss 4.56034
+2024-04-25 12:00:25,122 - INFO - 
+ Epoch: 0219 train_loss= 13.81050 train_acc= 0.70569 val_loss= 4.53052 val_acc= 0.82847 test_loss= 3.70976 test_acc= 0.85838 time= 5.68220
+2024-04-25 12:00:25,287 - INFO - Configurations for training:
+2024-04-25 12:00:25,290 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:26,644 - INFO - Current best loss 4.53052
+2024-04-25 12:00:32,203 - INFO - 
+ Epoch: 0220 train_loss= 15.37226 train_acc= 0.73567 val_loss= 4.48077 val_acc= 0.82847 test_loss= 3.66092 test_acc= 0.85884 time= 5.55615
+2024-04-25 12:00:32,310 - INFO - Configurations for training:
+2024-04-25 12:00:32,313 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:33,716 - INFO - Current best loss 4.48077
+2024-04-25 12:00:39,522 - INFO - 
+ Epoch: 0221 train_loss= 13.07632 train_acc= 0.69759 val_loss= 4.44058 val_acc= 0.82847 test_loss= 3.61764 test_acc= 0.85975 time= 5.80240
+2024-04-25 12:00:39,760 - INFO - Configurations for training:
+2024-04-25 12:00:39,763 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:40,876 - INFO - Current best loss 4.44058
+2024-04-25 12:00:46,447 - INFO - 
+ Epoch: 0222 train_loss= 11.67068 train_acc= 0.71582 val_loss= 4.40669 val_acc= 0.82847 test_loss= 3.57894 test_acc= 0.86204 time= 5.56761
+2024-04-25 12:00:46,621 - INFO - Configurations for training:
+2024-04-25 12:00:46,633 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:48,046 - INFO - Current best loss 4.40669
+2024-04-25 12:00:53,684 - INFO - 
+ Epoch: 0223 train_loss= 12.84038 train_acc= 0.74843 val_loss= 4.36036 val_acc= 0.83029 test_loss= 3.52912 test_acc= 0.86204 time= 5.63510
+2024-04-25 12:00:53,779 - INFO - Configurations for training:
+2024-04-25 12:00:53,782 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:00:54,645 - INFO - Current best loss 4.36036
+2024-04-25 12:01:00,190 - INFO - 
+ Epoch: 0224 train_loss= 13.91950 train_acc= 0.72696 val_loss= 4.31210 val_acc= 0.83029 test_loss= 3.48488 test_acc= 0.86295 time= 5.54243
+2024-04-25 12:01:00,306 - INFO - Configurations for training:
+2024-04-25 12:01:00,309 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:01,443 - INFO - Current best loss 4.31210
+2024-04-25 12:01:07,026 - INFO - 
+ Epoch: 0225 train_loss= 13.09197 train_acc= 0.72271 val_loss= 4.26896 val_acc= 0.83212 test_loss= 3.44798 test_acc= 0.86386 time= 5.58009
+2024-04-25 12:01:07,148 - INFO - Configurations for training:
+2024-04-25 12:01:07,151 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:08,105 - INFO - Current best loss 4.26896
+2024-04-25 12:01:14,338 - INFO - 
+ Epoch: 0226 train_loss= 12.02311 train_acc= 0.72554 val_loss= 4.23303 val_acc= 0.83394 test_loss= 3.41800 test_acc= 0.86432 time= 6.23078
+2024-04-25 12:01:14,477 - INFO - Configurations for training:
+2024-04-25 12:01:14,479 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:15,743 - INFO - Current best loss 4.23303
+2024-04-25 12:01:21,434 - INFO - 
+ Epoch: 0227 train_loss= 10.29549 train_acc= 0.74013 val_loss= 4.20511 val_acc= 0.83394 test_loss= 3.39288 test_acc= 0.86524 time= 5.68825
+2024-04-25 12:01:21,532 - INFO - Configurations for training:
+2024-04-25 12:01:21,544 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:22,367 - INFO - Current best loss 4.20511
+2024-04-25 12:01:27,887 - INFO - 
+ Epoch: 0228 train_loss= 15.08826 train_acc= 0.72919 val_loss= 4.16475 val_acc= 0.83394 test_loss= 3.36171 test_acc= 0.86661 time= 5.51685
+2024-04-25 12:01:28,004 - INFO - Configurations for training:
+2024-04-25 12:01:28,006 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:28,757 - INFO - Current best loss 4.16475
+2024-04-25 12:01:34,308 - INFO - 
+ Epoch: 0229 train_loss= 13.81993 train_acc= 0.69192 val_loss= 4.12998 val_acc= 0.83577 test_loss= 3.34142 test_acc= 0.86569 time= 5.54784
+2024-04-25 12:01:34,424 - INFO - Configurations for training:
+2024-04-25 12:01:34,426 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:35,281 - INFO - Current best loss 4.12998
+2024-04-25 12:01:40,932 - INFO - 
+ Epoch: 0230 train_loss= 12.44526 train_acc= 0.70812 val_loss= 4.10523 val_acc= 0.83577 test_loss= 3.32878 test_acc= 0.86569 time= 5.64914
+2024-04-25 12:01:41,008 - INFO - Configurations for training:
+2024-04-25 12:01:41,010 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:41,701 - INFO - Current best loss 4.10523
+2024-04-25 12:01:47,977 - INFO - 
+ Epoch: 0231 train_loss= 10.05315 train_acc= 0.75127 val_loss= 4.08084 val_acc= 0.83577 test_loss= 3.31686 test_acc= 0.86524 time= 6.27391
+2024-04-25 12:01:48,112 - INFO - Configurations for training:
+2024-04-25 12:01:48,115 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:49,173 - INFO - Current best loss 4.08084
+2024-04-25 12:01:54,643 - INFO - 
+ Epoch: 0232 train_loss= 12.26679 train_acc= 0.70995 val_loss= 4.04758 val_acc= 0.83759 test_loss= 3.29817 test_acc= 0.86524 time= 5.46762
+2024-04-25 12:01:54,748 - INFO - Configurations for training:
+2024-04-25 12:01:54,751 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:01:55,851 - INFO - Current best loss 4.04758
+2024-04-25 12:02:01,421 - INFO - 
+ Epoch: 0233 train_loss= 12.53281 train_acc= 0.72514 val_loss= 4.02106 val_acc= 0.83942 test_loss= 3.28528 test_acc= 0.86524 time= 5.56664
+2024-04-25 12:02:01,549 - INFO - Configurations for training:
+2024-04-25 12:02:01,552 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:02:02,647 - INFO - Current best loss 4.02106
+2024-04-25 12:02:08,221 - INFO - 
+ Epoch: 0234 train_loss= 11.90646 train_acc= 0.71764 val_loss= 4.00002 val_acc= 0.83759 test_loss= 3.27420 test_acc= 0.86524 time= 5.57179
+2024-04-25 12:02:08,324 - INFO - Configurations for training:
+2024-04-25 12:02:08,336 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:02:09,446 - INFO - Current best loss 4.00002
+2024-04-25 12:02:14,920 - INFO - 
+ Epoch: 0235 train_loss= 12.13062 train_acc= 0.66316 val_loss= 3.98377 val_acc= 0.83759 test_loss= 3.26796 test_acc= 0.86524 time= 5.47037
+2024-04-25 12:02:15,031 - INFO - Configurations for training:
+2024-04-25 12:02:15,044 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:02:16,177 - INFO - Current best loss 3.98377
+2024-04-25 12:02:22,448 - INFO - 
+ Epoch: 0236 train_loss= 11.08636 train_acc= 0.75917 val_loss= 3.96669 val_acc= 0.83759 test_loss= 3.25779 test_acc= 0.86524 time= 6.26884
+2024-04-25 12:02:22,575 - INFO - Configurations for training:
+2024-04-25 12:02:22,577 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:02:23,882 - INFO - Current best loss 3.96669
+2024-04-25 12:02:29,477 - INFO - 
+ Epoch: 0237 train_loss= 14.72690 train_acc= 0.72534 val_loss= 3.95183 val_acc= 0.83759 test_loss= 3.25064 test_acc= 0.86524 time= 5.59126
+2024-04-25 12:02:29,670 - INFO - Configurations for training:
+2024-04-25 12:02:29,683 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:02:31,091 - INFO - Current best loss 3.95183
+2024-04-25 12:02:36,605 - INFO - 
+ Epoch: 0238 train_loss= 8.98847 train_acc= 0.76585 val_loss= 3.94166 val_acc= 0.84124 test_loss= 3.24430 test_acc= 0.86524 time= 5.51101
+2024-04-25 12:02:36,726 - INFO - Configurations for training:
+2024-04-25 12:02:36,729 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:02:37,815 - INFO - Current best loss 3.94166
+2024-04-25 12:02:43,490 - INFO - 
+ Epoch: 0239 train_loss= 10.24663 train_acc= 0.75451 val_loss= 3.93801 val_acc= 0.84124 test_loss= 3.24351 test_acc= 0.86478 time= 5.67221
+2024-04-25 12:02:43,588 - INFO - Configurations for training:
+2024-04-25 12:02:43,590 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:02:44,842 - INFO - Current best loss 3.93801
+2024-04-25 12:02:50,939 - INFO - 
+ Epoch: 0240 train_loss= 12.11520 train_acc= 0.72554 val_loss= 3.94224 val_acc= 0.84124 test_loss= 3.25193 test_acc= 0.86524 time= 6.09442
+2024-04-25 12:02:56,505 - INFO - 
+ Epoch: 0241 train_loss= 9.33265 train_acc= 0.74276 val_loss= 3.95066 val_acc= 0.84124 test_loss= 3.26430 test_acc= 0.86478 time= 5.56299
+2024-04-25 12:03:02,022 - INFO - 
+ Epoch: 0242 train_loss= 12.18137 train_acc= 0.74256 val_loss= 3.95118 val_acc= 0.84124 test_loss= 3.27023 test_acc= 0.86478 time= 5.51388
+2024-04-25 12:03:07,602 - INFO - 
+ Epoch: 0243 train_loss= 11.07676 train_acc= 0.75208 val_loss= 3.93460 val_acc= 0.84124 test_loss= 3.26269 test_acc= 0.86524 time= 5.57384
+2024-04-25 12:03:07,692 - INFO - Configurations for training:
+2024-04-25 12:03:07,695 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:09,231 - INFO - Current best loss 3.93460
+2024-04-25 12:03:14,816 - INFO - 
+ Epoch: 0244 train_loss= 10.71793 train_acc= 0.74316 val_loss= 3.91747 val_acc= 0.83942 test_loss= 3.25525 test_acc= 0.86615 time= 5.58054
+2024-04-25 12:03:14,911 - INFO - Configurations for training:
+2024-04-25 12:03:14,914 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:15,923 - INFO - Current best loss 3.91747
+2024-04-25 12:03:21,639 - INFO - 
+ Epoch: 0245 train_loss= 13.58129 train_acc= 0.73061 val_loss= 3.90377 val_acc= 0.83942 test_loss= 3.24685 test_acc= 0.86615 time= 5.71349
+2024-04-25 12:03:21,841 - INFO - Configurations for training:
+2024-04-25 12:03:21,843 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:23,608 - INFO - Current best loss 3.90377
+2024-04-25 12:03:29,131 - INFO - 
+ Epoch: 0246 train_loss= 19.58096 train_acc= 0.72028 val_loss= 3.87435 val_acc= 0.83942 test_loss= 3.22041 test_acc= 0.86615 time= 5.51910
+2024-04-25 12:03:29,230 - INFO - Configurations for training:
+2024-04-25 12:03:29,232 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:30,429 - INFO - Current best loss 3.87435
+2024-04-25 12:03:36,108 - INFO - 
+ Epoch: 0247 train_loss= 10.90988 train_acc= 0.71663 val_loss= 3.84211 val_acc= 0.83942 test_loss= 3.19360 test_acc= 0.86752 time= 5.67440
+2024-04-25 12:03:36,210 - INFO - Configurations for training:
+2024-04-25 12:03:36,225 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:37,601 - INFO - Current best loss 3.84211
+2024-04-25 12:03:43,106 - INFO - 
+ Epoch: 0248 train_loss= 10.31634 train_acc= 0.74397 val_loss= 3.81023 val_acc= 0.83942 test_loss= 3.16770 test_acc= 0.86706 time= 5.50167
+2024-04-25 12:03:43,194 - INFO - Configurations for training:
+2024-04-25 12:03:43,196 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:44,315 - INFO - Current best loss 3.81023
+2024-04-25 12:03:49,946 - INFO - 
+ Epoch: 0249 train_loss= 9.59402 train_acc= 0.76909 val_loss= 3.77980 val_acc= 0.84124 test_loss= 3.14284 test_acc= 0.86661 time= 5.62829
+2024-04-25 12:03:50,065 - INFO - Configurations for training:
+2024-04-25 12:03:50,068 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:51,116 - INFO - Current best loss 3.77980
+2024-04-25 12:03:57,342 - INFO - 
+ Epoch: 0250 train_loss= 13.73993 train_acc= 0.72980 val_loss= 3.73703 val_acc= 0.84124 test_loss= 3.11246 test_acc= 0.86752 time= 6.22295
+2024-04-25 12:03:57,444 - INFO - Configurations for training:
+2024-04-25 12:03:57,447 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:03:58,685 - INFO - Current best loss 3.73703
+2024-04-25 12:04:04,281 - INFO - 
+ Epoch: 0251 train_loss= 12.15225 train_acc= 0.70529 val_loss= 3.69630 val_acc= 0.84672 test_loss= 3.08395 test_acc= 0.86798 time= 5.59216
+2024-04-25 12:04:04,400 - INFO - Configurations for training:
+2024-04-25 12:04:04,403 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:05,976 - INFO - Current best loss 3.69630
+2024-04-25 12:04:11,639 - INFO - 
+ Epoch: 0252 train_loss= 14.14865 train_acc= 0.70488 val_loss= 3.64454 val_acc= 0.84489 test_loss= 3.04975 test_acc= 0.87026 time= 5.66018
+2024-04-25 12:04:11,745 - INFO - Configurations for training:
+2024-04-25 12:04:11,758 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:13,054 - INFO - Current best loss 3.64454
+2024-04-25 12:04:18,732 - INFO - 
+ Epoch: 0253 train_loss= 10.19408 train_acc= 0.71339 val_loss= 3.59854 val_acc= 0.84489 test_loss= 3.01906 test_acc= 0.87209 time= 5.67528
+2024-04-25 12:04:18,840 - INFO - Configurations for training:
+2024-04-25 12:04:18,843 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:19,894 - INFO - Current best loss 3.59854
+2024-04-25 12:04:25,734 - INFO - 
+ Epoch: 0254 train_loss= 10.37179 train_acc= 0.75046 val_loss= 3.55974 val_acc= 0.84489 test_loss= 2.99005 test_acc= 0.87300 time= 5.83750
+2024-04-25 12:04:25,850 - INFO - Configurations for training:
+2024-04-25 12:04:25,853 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:27,032 - INFO - Current best loss 3.55974
+2024-04-25 12:04:33,158 - INFO - 
+ Epoch: 0255 train_loss= 11.15340 train_acc= 0.71866 val_loss= 3.51924 val_acc= 0.84489 test_loss= 2.96110 test_acc= 0.87300 time= 6.11984
+2024-04-25 12:04:33,294 - INFO - Configurations for training:
+2024-04-25 12:04:33,297 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:34,454 - INFO - Current best loss 3.51924
+2024-04-25 12:04:40,044 - INFO - 
+ Epoch: 0256 train_loss= 9.93359 train_acc= 0.76220 val_loss= 3.48090 val_acc= 0.84672 test_loss= 2.93367 test_acc= 0.87391 time= 5.58599
+2024-04-25 12:04:40,214 - INFO - Configurations for training:
+2024-04-25 12:04:40,217 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:41,498 - INFO - Current best loss 3.48090
+2024-04-25 12:04:47,112 - INFO - 
+ Epoch: 0257 train_loss= 10.15765 train_acc= 0.75471 val_loss= 3.44585 val_acc= 0.85037 test_loss= 2.90920 test_acc= 0.87529 time= 5.61133
+2024-04-25 12:04:47,267 - INFO - Configurations for training:
+2024-04-25 12:04:47,269 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:48,344 - INFO - Current best loss 3.44585
+2024-04-25 12:04:53,934 - INFO - 
+ Epoch: 0258 train_loss= 12.11321 train_acc= 0.75694 val_loss= 3.40477 val_acc= 0.85037 test_loss= 2.88416 test_acc= 0.87894 time= 5.58634
+2024-04-25 12:04:54,056 - INFO - Configurations for training:
+2024-04-25 12:04:54,060 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:04:55,402 - INFO - Current best loss 3.40477
+2024-04-25 12:05:01,669 - INFO - 
+ Epoch: 0259 train_loss= 11.38841 train_acc= 0.74580 val_loss= 3.35757 val_acc= 0.85401 test_loss= 2.86085 test_acc= 0.87940 time= 6.26357
+2024-04-25 12:05:01,756 - INFO - Configurations for training:
+2024-04-25 12:05:01,762 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:03,276 - INFO - Current best loss 3.35757
+2024-04-25 12:05:08,951 - INFO - 
+ Epoch: 0260 train_loss= 11.70998 train_acc= 0.73061 val_loss= 3.31679 val_acc= 0.85401 test_loss= 2.84745 test_acc= 0.88077 time= 5.67190
+2024-04-25 12:05:09,074 - INFO - Configurations for training:
+2024-04-25 12:05:09,077 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:10,576 - INFO - Current best loss 3.31679
+2024-04-25 12:05:16,216 - INFO - 
+ Epoch: 0261 train_loss= 12.40230 train_acc= 0.74013 val_loss= 3.28438 val_acc= 0.85401 test_loss= 2.82579 test_acc= 0.88168 time= 5.63764
+2024-04-25 12:05:16,396 - INFO - Configurations for training:
+2024-04-25 12:05:16,398 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:17,818 - INFO - Current best loss 3.28438
+2024-04-25 12:05:23,597 - INFO - 
+ Epoch: 0262 train_loss= 11.08613 train_acc= 0.76038 val_loss= 3.25595 val_acc= 0.85219 test_loss= 2.79981 test_acc= 0.88305 time= 5.77652
+2024-04-25 12:05:23,721 - INFO - Configurations for training:
+2024-04-25 12:05:23,724 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:24,613 - INFO - Current best loss 3.25595
+2024-04-25 12:05:30,206 - INFO - 
+ Epoch: 0263 train_loss= 10.97503 train_acc= 0.73405 val_loss= 3.23096 val_acc= 0.85219 test_loss= 2.77445 test_acc= 0.88305 time= 5.59016
+2024-04-25 12:05:30,345 - INFO - Configurations for training:
+2024-04-25 12:05:30,351 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:31,390 - INFO - Current best loss 3.23096
+2024-04-25 12:05:37,758 - INFO - 
+ Epoch: 0264 train_loss= 12.10081 train_acc= 0.73526 val_loss= 3.21572 val_acc= 0.85401 test_loss= 2.75680 test_acc= 0.88442 time= 6.36286
+2024-04-25 12:05:37,900 - INFO - Configurations for training:
+2024-04-25 12:05:37,903 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:39,072 - INFO - Current best loss 3.21572
+2024-04-25 12:05:44,786 - INFO - 
+ Epoch: 0265 train_loss= 11.43178 train_acc= 0.76747 val_loss= 3.19649 val_acc= 0.85401 test_loss= 2.73048 test_acc= 0.88488 time= 5.71058
+2024-04-25 12:05:44,901 - INFO - Configurations for training:
+2024-04-25 12:05:44,903 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:46,091 - INFO - Current best loss 3.19649
+2024-04-25 12:05:51,816 - INFO - 
+ Epoch: 0266 train_loss= 10.86328 train_acc= 0.74580 val_loss= 3.17889 val_acc= 0.85401 test_loss= 2.70383 test_acc= 0.88488 time= 5.72246
+2024-04-25 12:05:51,934 - INFO - Configurations for training:
+2024-04-25 12:05:51,946 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:05:53,391 - INFO - Current best loss 3.17889
+2024-04-25 12:05:59,051 - INFO - 
+ Epoch: 0267 train_loss= 10.54534 train_acc= 0.74215 val_loss= 3.16691 val_acc= 0.85401 test_loss= 2.68402 test_acc= 0.88488 time= 5.65670
+2024-04-25 12:05:59,174 - INFO - Configurations for training:
+2024-04-25 12:05:59,191 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:06:00,168 - INFO - Current best loss 3.16691
+2024-04-25 12:06:06,390 - INFO - 
+ Epoch: 0268 train_loss= 13.76889 train_acc= 0.67835 val_loss= 3.15989 val_acc= 0.85219 test_loss= 2.67030 test_acc= 0.88351 time= 6.21710
+2024-04-25 12:06:06,573 - INFO - Configurations for training:
+2024-04-25 12:06:06,579 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:06:08,023 - INFO - Current best loss 3.15989
+2024-04-25 12:06:13,830 - INFO - 
+ Epoch: 0269 train_loss= 9.33369 train_acc= 0.77375 val_loss= 3.15879 val_acc= 0.85401 test_loss= 2.65616 test_acc= 0.88259 time= 5.80365
+2024-04-25 12:06:13,971 - INFO - Configurations for training:
+2024-04-25 12:06:13,974 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:06:15,146 - INFO - Current best loss 3.15879
+2024-04-25 12:06:20,978 - INFO - 
+ Epoch: 0270 train_loss= 8.94342 train_acc= 0.78367 val_loss= 3.16254 val_acc= 0.85401 test_loss= 2.64578 test_acc= 0.88259 time= 5.82932
+2024-04-25 12:06:26,750 - INFO - 
+ Epoch: 0271 train_loss= 10.79326 train_acc= 0.71035 val_loss= 3.17099 val_acc= 0.85401 test_loss= 2.64129 test_acc= 0.88305 time= 5.76919
+2024-04-25 12:06:32,470 - INFO - 
+ Epoch: 0272 train_loss= 9.52191 train_acc= 0.77415 val_loss= 3.17622 val_acc= 0.85401 test_loss= 2.63665 test_acc= 0.88168 time= 5.71682
+2024-04-25 12:06:38,667 - INFO - 
+ Epoch: 0273 train_loss= 15.80252 train_acc= 0.71035 val_loss= 3.19779 val_acc= 0.85401 test_loss= 2.65422 test_acc= 0.88122 time= 6.19467
+2024-04-25 12:06:44,523 - INFO - 
+ Epoch: 0274 train_loss= 10.29437 train_acc= 0.76727 val_loss= 3.21558 val_acc= 0.85401 test_loss= 2.66415 test_acc= 0.88077 time= 5.85281
+2024-04-25 12:06:50,138 - INFO - 
+ Epoch: 0275 train_loss= 10.53882 train_acc= 0.77517 val_loss= 3.23217 val_acc= 0.85219 test_loss= 2.67298 test_acc= 0.87803 time= 5.61198
+2024-04-25 12:06:55,668 - INFO - 
+ Epoch: 0276 train_loss= 9.86329 train_acc= 0.74235 val_loss= 3.24794 val_acc= 0.85219 test_loss= 2.68866 test_acc= 0.87620 time= 5.52684
+2024-04-25 12:07:01,214 - INFO - 
+ Epoch: 0277 train_loss= 14.12316 train_acc= 0.73061 val_loss= 3.25735 val_acc= 0.85401 test_loss= 2.70943 test_acc= 0.87574 time= 5.54265
+2024-04-25 12:07:06,908 - INFO - 
+ Epoch: 0278 train_loss= 10.36133 train_acc= 0.75572 val_loss= 3.26765 val_acc= 0.85401 test_loss= 2.73312 test_acc= 0.87620 time= 5.69078
+2024-04-25 12:07:12,957 - INFO - 
+ Epoch: 0279 train_loss= 8.20156 train_acc= 0.77537 val_loss= 3.27768 val_acc= 0.85401 test_loss= 2.75430 test_acc= 0.87711 time= 6.04496
+2024-04-25 12:07:18,586 - INFO - 
+ Epoch: 0280 train_loss= 9.33257 train_acc= 0.76220 val_loss= 3.28807 val_acc= 0.85219 test_loss= 2.77816 test_acc= 0.87711 time= 5.62426
+2024-04-25 12:07:24,464 - INFO - 
+ Epoch: 0281 train_loss= 10.25324 train_acc= 0.76423 val_loss= 3.29456 val_acc= 0.85219 test_loss= 2.80035 test_acc= 0.87666 time= 5.87452
+2024-04-25 12:07:30,086 - INFO - 
+ Epoch: 0282 train_loss= 14.41170 train_acc= 0.70286 val_loss= 3.30753 val_acc= 0.85401 test_loss= 2.81700 test_acc= 0.87711 time= 5.61876
+2024-04-25 12:07:35,795 - INFO - 
+ Epoch: 0283 train_loss= 12.23658 train_acc= 0.75876 val_loss= 3.32346 val_acc= 0.85401 test_loss= 2.83147 test_acc= 0.87620 time= 5.70584
+2024-04-25 12:07:41,369 - INFO - 
+ Epoch: 0284 train_loss= 11.71441 train_acc= 0.74296 val_loss= 3.33859 val_acc= 0.85401 test_loss= 2.84032 test_acc= 0.87620 time= 5.56934
+2024-04-25 12:07:47,688 - INFO - 
+ Epoch: 0285 train_loss= 10.46675 train_acc= 0.73769 val_loss= 3.35618 val_acc= 0.85219 test_loss= 2.84677 test_acc= 0.87620 time= 6.31331
+2024-04-25 12:07:53,333 - INFO - 
+ Epoch: 0286 train_loss= 11.55371 train_acc= 0.74559 val_loss= 3.35800 val_acc= 0.85219 test_loss= 2.84573 test_acc= 0.87620 time= 5.64231
+2024-04-25 12:07:58,791 - INFO - 
+ Epoch: 0287 train_loss= 12.54715 train_acc= 0.69496 val_loss= 3.37134 val_acc= 0.85219 test_loss= 2.85949 test_acc= 0.87620 time= 5.45538
+2024-04-25 12:08:04,269 - INFO - 
+ Epoch: 0288 train_loss= 16.09910 train_acc= 0.69516 val_loss= 3.40169 val_acc= 0.85219 test_loss= 2.87736 test_acc= 0.87529 time= 5.47484
+2024-04-25 12:08:09,966 - INFO - 
+ Epoch: 0289 train_loss= 9.82018 train_acc= 0.74418 val_loss= 3.42983 val_acc= 0.85219 test_loss= 2.89228 test_acc= 0.87391 time= 5.69196
+2024-04-25 12:08:15,592 - INFO - 
+ Epoch: 0290 train_loss= 10.39326 train_acc= 0.76950 val_loss= 3.46362 val_acc= 0.85037 test_loss= 2.91478 test_acc= 0.87300 time= 5.62299
+2024-04-25 12:08:22,029 - INFO - 
+ Epoch: 0291 train_loss= 9.18267 train_acc= 0.78813 val_loss= 3.48897 val_acc= 0.85037 test_loss= 2.93013 test_acc= 0.87117 time= 6.42926
+2024-04-25 12:08:27,615 - INFO - 
+ Epoch: 0292 train_loss= 8.73863 train_acc= 0.76139 val_loss= 3.49813 val_acc= 0.84854 test_loss= 2.93323 test_acc= 0.87163 time= 5.58248
+2024-04-25 12:08:33,450 - INFO - 
+ Epoch: 0293 train_loss= 14.05732 train_acc= 0.75086 val_loss= 3.50900 val_acc= 0.84854 test_loss= 2.94158 test_acc= 0.87163 time= 5.83157
+2024-04-25 12:08:38,905 - INFO - 
+ Epoch: 0294 train_loss= 13.01472 train_acc= 0.76261 val_loss= 3.51674 val_acc= 0.84854 test_loss= 2.94754 test_acc= 0.87026 time= 5.44922
+2024-04-25 12:08:44,420 - INFO - 
+ Epoch: 0295 train_loss= 9.76320 train_acc= 0.73749 val_loss= 3.52552 val_acc= 0.85037 test_loss= 2.95346 test_acc= 0.86935 time= 5.50932
+2024-04-25 12:08:50,418 - INFO - 
+ Epoch: 0296 train_loss= 9.11847 train_acc= 0.78813 val_loss= 3.54027 val_acc= 0.84672 test_loss= 2.96422 test_acc= 0.86980 time= 5.99571
+2024-04-25 12:08:56,245 - INFO - 
+ Epoch: 0297 train_loss= 9.85307 train_acc= 0.76524 val_loss= 3.55499 val_acc= 0.84672 test_loss= 2.97493 test_acc= 0.86980 time= 5.81575
+2024-04-25 12:09:01,822 - INFO - 
+ Epoch: 0298 train_loss= 11.47349 train_acc= 0.77375 val_loss= 3.56259 val_acc= 0.84854 test_loss= 2.97813 test_acc= 0.87026 time= 5.57455
+2024-04-25 12:09:07,377 - INFO - 
+ Epoch: 0299 train_loss= 8.84325 train_acc= 0.79198 val_loss= 3.57795 val_acc= 0.84672 test_loss= 2.98640 test_acc= 0.86980 time= 5.54884
+2024-04-25 12:09:13,033 - INFO - 
+ Epoch: 0300 train_loss= 9.77767 train_acc= 0.75309 val_loss= 3.60420 val_acc= 0.84672 test_loss= 3.00783 test_acc= 0.87072 time= 5.65182
+2024-04-25 12:09:13,272 - INFO - Configurations for training:
+2024-04-25 12:09:13,275 - DEBUG - {'do_train': True, 'do_valid': True, 'do_test': True, 'no_sparse': False, 'load_ckpt': False, 'featureless': False, 'use_sem': False, 'use_syn': False, 'use_seq': False, 'save_path': './saved_model', 'dataset': 'R8', 'model': 'gcn', 'lr': 2e-05, 'epochs': 300, 'hidden': 200, 'layers': 2, 'dropout': 0.8, 'weight_decay': 1e-06, 'early_stop': 300, 'max_degree': 3, 'model_name': 'model', 'run_id': 'seq_syn'}
+2024-04-25 12:09:14,443 - INFO - Optimization Finished!
+2024-04-25 12:09:14,679 - INFO - Successfully pickled file 'model_train_results.pkl' with loss and accuracy metrics to ./saved_model
+2024-04-25 12:09:14,681 - INFO - Starting validation
+2024-04-25 12:09:18,751 - INFO - Val set results: cost= 3.60420 accuracy= 0.84672 time= 1.40655
+2024-04-25 12:09:18,756 - DEBUG - tensor([0., 0., 0.,  ..., 0., 0., 0.])
+2024-04-25 12:09:18,769 - DEBUG - 15362
+2024-04-25 12:09:18,986 - INFO - Val Precision, Recall and F1-Score...
+2024-04-25 12:09:18,999 - INFO - 
+               precision    recall  f1-score   support
+
+           0     1.0000    0.0435    0.0833        23
+           1     0.8503    0.9045    0.8765       157
+           2     0.9545    0.7000    0.8077        30
+           3     0.8348    0.9858    0.9041       282
+           4     0.8333    0.2381    0.3704        21
+           5     1.0000    0.0714    0.1333        14
+           6     0.0000    0.0000    0.0000         3
+           7     0.8889    0.8889    0.8889        18
+
+    accuracy                         0.8467       548
+   macro avg     0.7952    0.4790    0.5080       548
+weighted avg     0.8541    0.8467    0.8109       548
+ 
+2024-04-25 12:09:19,004 - INFO - Macro average Val Precision, Recall and F1-Score...
+2024-04-25 12:09:19,010 - INFO - (0.7952377391000146, 0.47902064510565723, 0.5080283105181479, None)
+2024-04-25 12:09:19,020 - INFO - Micro average Val Precision, Recall and F1-Score...
+2024-04-25 12:09:19,025 - INFO - (0.8467153284671532, 0.8467153284671532, 0.8467153284671532, None)
+2024-04-25 12:09:19,034 - INFO - Starting testing
+2024-04-25 12:09:23,510 - INFO - Test set results: cost= 3.00783 accuracy= 0.87072 time= 1.92220
+2024-04-25 12:09:23,514 - DEBUG - Test mask:
+2024-04-25 12:09:23,527 - DEBUG - 15362
+2024-04-25 12:09:23,747 - INFO - Test Precision, Recall and F1-Score...
+2024-04-25 12:09:23,758 - INFO - 
+               precision    recall  f1-score   support
+
+           0     1.0000    0.0617    0.1163        81
+           1     0.8577    0.9009    0.8788       696
+           2     0.7761    0.6933    0.7324        75
+           3     0.8783    0.9926    0.9319      1083
+           4     0.9444    0.3908    0.5528        87
+           5     0.0000    0.0000    0.0000        36
+           6     1.0000    0.1000    0.1818        10
+           7     0.8960    0.9256    0.9106       121
+
+    accuracy                         0.8707      2189
+   macro avg     0.7941    0.5081    0.5381      2189
+weighted avg     0.8625    0.8707    0.8430      2189
+
+2024-04-25 12:09:23,768 - INFO - Macro average Test Precision, Recall and F1-Score...
+2024-04-25 12:09:23,773 - INFO - (0.7940701199315778, 0.5081201676873947, 0.5380773932223271, None)
+2024-04-25 12:09:23,789 - INFO - Micro average Test Precision, Recall and F1-Score...
+2024-04-25 12:09:23,802 - INFO - (0.8707172224760165, 0.8707172224760165, 0.8707172224760165, None)
+2024-04-25 12:09:23,813 - INFO - Total execution time: 1912.54 seconds
